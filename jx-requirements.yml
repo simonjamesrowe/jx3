@@ -17,16 +17,20 @@ spec:
     registry: ghcr.io
   environments:
   - key: dev
+    owner: simonrowe
+    repository: jx3
   - key: staging
   - key: production
   ingress:
-    domain: "simonjamesrowe.com"
-    externalDNS: false
-    namespaceSubDomain: ""
+    domain: simonjamesrowe.com
+    kind: ingress
+    namespaceSubDomain: -jx.
     tls:
       email: ""
       enabled: false
       production: false
+  pipelineUser:
+    username: simonrowe
   repository: bucketrepo
   secretStorage: vault
   vault: {}

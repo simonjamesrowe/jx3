@@ -24,7 +24,7 @@ jxRequirements:
     chartRepository: http://bucketrepo.jx.svc.cluster.local/bucketrepo/charts
     clusterName: kind
     devEnvApprovers:
-    - todo
+    - simonrowe
     environmentGitOwner: todo
     gitKind: github
     gitName: github
@@ -33,16 +33,20 @@ jxRequirements:
     registry: ghcr.io
   environments:
   - key: dev
+    owner: simonrowe
+    repository: jx3
   - key: staging
   - key: production
   ingress:
-    domain: change.me
+    domain: simonjamesrowe.com
     kind: ingress
     namespaceSubDomain: -jx.
     tls:
       email: ""
       enabled: false
       production: false
+  pipelineUser:
+    username: simonrowe
   repository: bucketrepo
   secretStorage: vault
   vault: {}
