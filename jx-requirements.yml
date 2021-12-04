@@ -24,7 +24,7 @@ spec:
   ingress:
     domain: simonjamesrowe.com
     kind: ingress
-    namespaceSubDomain: -jx.
+    namespaceSubDomain: ""
     tls:
       email: ""
       enabled: false
