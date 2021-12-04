@@ -8,7 +8,7 @@ spec:
     chartRepository: http://bucketrepo.jx.svc.cluster.local/bucketrepo/charts
     clusterName: kind
     devEnvApprovers:
-    - todo
+    - simonrowe
     environmentGitOwner: todo
     gitKind: github
     gitName: github
@@ -20,9 +20,9 @@ spec:
   - key: staging
   - key: production
   ingress:
-    domain: ""
+    domain: "simonjamesrowe.com"
     externalDNS: false
-    namespaceSubDomain: -jx.
+    namespaceSubDomain: ""
     tls:
       email: ""
       enabled: false
