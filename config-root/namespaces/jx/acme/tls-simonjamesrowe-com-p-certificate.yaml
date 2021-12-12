@@ -1,0 +1,20 @@
+# Source: acme/templates/cert-manager-prod-certificate.yaml
+apiVersion: cert-manager.io/v1
+kind: Certificate
+metadata:
+  name: "tls-simonjamesrowe-com-p"
+  labels:
+    jenkins.io/letsencrypt-service: production
+    gitops.jenkins-x.io/pipeline: 'namespaces'
+  annotations:
+    replicator.v1.mittwald.de/replication-allowed: "true"
+    replicator.v1.mittwald.de/replication-allowed-namespaces: "jx-staging,jx-production"
+    meta.helm.sh/release-name: 'acme'
+  namespace: jx
+spec:
+  secretName: "tls-simonjamesrowe-com-p"
+  issuerRef:
+    name: letsencrypt-prod
+  commonName: "*.simonjamesrowe.com"
+  dnsNames:
+    - "*.simonjamesrowe.com"
