@@ -5,9 +5,9 @@ helmfiles:
 - path: helmfiles/secret-infra/helmfile.yaml
 - path: helmfiles/tekton-pipelines/helmfile.yaml
 releases:
-  - chart: ./charts/acme
-    version: 1.0.0
-    name: acme
-    namespace: jx
+- chart: ./charts/acme
+  version: 1.0.0
+  name: acme
+  namespace: jx
 templates: {}
 renderedvalues: {}

@@ -1,0 +1,31 @@
+# Source: acme/templates/cert-manager-prod-issuer.yaml
+apiVersion: cert-manager.io/v1
+kind: Issuer
+metadata:
+  name: letsencrypt-prod
+  annotations:
+    meta.helm.sh/release-name: 'acme'
+  namespace: jx
+  labels:
+    gitops.jenkins-x.io/pipeline: 'namespaces'
+spec:
+  acme:
+    server: https://acme-v02.api.letsencrypt.org/directory
+    email: "simon.rowe@gmail.com"
+    # Name of a secret used to store the ACME account private key
+    privateKeySecretRef:
+      name: letsencrypt-prod
+    solvers:
+      - selector:
+          dnsNames:
+            - "*.simonjamesrowe.com"
+            - "simonjamesrowe.com"
+        # ACME DNS-01 provider configurations
+        dns01:
+          route53:
+            region: us-east-1
+            hostedZoneID: ZKF198WQXTUV4
+            accessKeyID: AKIAWJT6BF5QSHAOKZPW
+            secretAccessKeySecretRef:
+              name: jx-aws-credentials
+              key: accessSecret
