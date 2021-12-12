@@ -1,0 +1,8 @@
+cluster:
+  domain: simonjamesrowe.com
+certmanager:
+  email: simon.rowe@gmail.com
+aws:
+  hostedZoneId: ZKF198WQXTUV4
+  accessKeyId: AKIAWJT6BF5QSHAOKZPW
+
