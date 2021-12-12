@@ -17,7 +17,7 @@ spec:
     registry: ghcr.io
   environments:
   - key: dev
-    owner: simonjamesrowe
+    owner: simonrowe
     repository: jx3
   - key: staging
   - key: production
@@ -26,7 +26,7 @@ spec:
     kind: ingress
     namespaceSubDomain: -jx.
     tls:
-      email: "simon.rowe@gmail.com"
+      email: simon.rowe@gmail.com
       enabled: true
       production: true
   pipelineUser:

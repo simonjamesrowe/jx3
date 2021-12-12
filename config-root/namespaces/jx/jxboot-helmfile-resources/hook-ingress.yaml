@@ -21,3 +21,7 @@ spec:
                   number: 80
             path: "/hook"
       host: hook-jx.simonjamesrowe.com
+  tls:
+    - hosts:
+        - hook-jx.simonjamesrowe.com
+      secretName: "tls-simonjamesrowe-com-p"

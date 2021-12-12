@@ -28,3 +28,7 @@ spec:
                 name: jx-pipelines-visualizer
                 port:
                   name: http
+  tls:
+    - secretName: tls-simonjamesrowe-com-p
+      hosts:
+        - dashboard-jx.simonjamesrowe.com

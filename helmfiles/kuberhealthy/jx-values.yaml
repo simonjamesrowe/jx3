@@ -42,9 +42,9 @@ jxRequirements:
     kind: ingress
     namespaceSubDomain: -kuberhealthy.
     tls:
-      email: ""
-      enabled: false
-      production: false
+      email: simon.rowe@gmail.com
+      enabled: true
+      production: true
   pipelineUser:
     username: simonrowe
   repository: bucketrepo
@@ -54,7 +54,7 @@ jxRequirements:
 jxRequirementsIngressExternalDNS:
   enabled: false
 jxRequirementsIngressTLS:
-  enabled: false
+  enabled: true
 jxRequirementsKuberhealthy:
   enabled: false
 jxRequirementsTLSCheck:
