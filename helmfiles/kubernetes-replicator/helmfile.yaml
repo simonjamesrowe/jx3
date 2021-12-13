@@ -1,0 +1,12 @@
+filepath: ""
+environments: {}
+namespace: mongodb
+repositories:
+  - name: mittwald
+    url: https://helm.mittwald.de
+releases:
+  - chart: mittwald/mongodb
+    version: 2.3.0
+    name: kubernetes-replicator
+templates: { }
+renderedvalues: { }

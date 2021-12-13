@@ -5,6 +5,7 @@ helmfiles:
 - path: helmfiles/secret-infra/helmfile.yaml
 - path: helmfiles/tekton-pipelines/helmfile.yaml
 - path: helmfiles/mongo/helmfile.yaml
+- path: helmfiles/mongo/kubernetes-replicator.yaml
 releases:
 - chart: ./charts/acme
   version: 1.0.0
