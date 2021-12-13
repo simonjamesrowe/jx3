@@ -95,6 +95,21 @@
 	      <td></td>
 	      <td><a href='https://github.com/cdfoundation/tekton-helm-chart'>source</a></td>
 	    </tr>
+    <tr>
+		      <td colspan='4'><h3>mongodb</h3></td>
+		    </tr>
+	    <tr>
+	      <td><a href='' title=''> <img src='' width='24px' height='24px'> secrets </a></td>
+	      <td>1.0.0</td>
+	      <td></td>
+	      <td></td>
+	    </tr>
+    <tr>
+	      <td><a href='https://mongodb.org' title='NoSQL document-oriented database that stores JSON-like documents with dynamic schemas, simplifying the integration of data in content-driven applications.'> <img src='https://bitnami.com/assets/stacks/mongodb/img/mongodb-stack-220x234.png' width='24px' height='24px'> mongodb </a></td>
+	      <td>7.14.0</td>
+	      <td></td>
+	      <td><a href='https://mongodb.org'>source</a></td>
+	    </tr>
 
   </tbody>
 </table>

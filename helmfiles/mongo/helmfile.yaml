@@ -12,6 +12,8 @@ releases:
   version: 1.0.0
   name: mongo-secrets
   namespace: mongodb
+  values:
+  - jx-values.yaml
 - chart: bitnami/mongodb
   version: 7.14.0
   name: mongodb
