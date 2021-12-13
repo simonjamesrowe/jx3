@@ -74,6 +74,21 @@
 	      <td></td>
 	      <td></td>
 	    </tr>
+    <tr>
+		      <td colspan='4'><h3>harbor</h3></td>
+		    </tr>
+	    <tr>
+	      <td><a href='' title=''> <img src='' width='24px' height='24px'> secrets </a></td>
+	      <td>1.0.0</td>
+	      <td></td>
+	      <td></td>
+	    </tr>
+    <tr>
+	      <td><a href='https://goharbor.io' title='An open source trusted cloud native registry that stores, signs, and scans content'> <img src='https://raw.githubusercontent.com/goharbor/website/master/static/img/logos/harbor-icon-color.png' width='24px' height='24px'> harbor </a></td>
+	      <td>1.7.4</td>
+	      <td></td>
+	      <td><a href='https://goharbor.io'>source</a></td>
+	    </tr>
 
   </tbody>
 </table>

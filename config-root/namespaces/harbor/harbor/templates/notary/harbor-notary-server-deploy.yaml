@@ -1,0 +1,82 @@
+# Source: harbor/templates/notary/notary-server.yaml
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: harbor-notary-server
+  labels:
+    heritage: Helm
+    release: harbor
+    chart: harbor
+    app: "harbor"
+    component: notary-server
+    gitops.jenkins-x.io/pipeline: 'namespaces'
+  annotations:
+    meta.helm.sh/release-name: 'harbor'
+    wave.pusher.com/update-on-config-change: 'true'
+  namespace: harbor
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      release: harbor
+      app: "harbor"
+      component: notary-server
+  template:
+    metadata:
+      labels:
+        heritage: Helm
+        release: harbor
+        chart: harbor
+        app: "harbor"
+        component: notary-server
+      annotations:
+        checksum/secret: 27454ae0fbf0c2cafe9ff001bf27f4a3b1887f99fa3a3f4805b467c02b12bcb8
+        checksum/secret-core: 6ebbabf0205f389c59a9b16afb62312e6d5dfac0037a993f56b51096ab5240bd
+    spec:
+      securityContext:
+        runAsUser: 10000
+        fsGroup: 10000
+      automountServiceAccountToken: false
+      containers:
+        - name: notary-server
+          image: goharbor/notary-server-photon:v2.3.4
+          imagePullPolicy: IfNotPresent
+          livenessProbe:
+            httpGet:
+              path: /_notary_server/health
+              scheme: "HTTP"
+              port: 4443
+            initialDelaySeconds: 300
+            periodSeconds: 10
+          readinessProbe:
+            httpGet:
+              path: /_notary_server/health
+              scheme: "HTTP"
+              port: 4443
+            initialDelaySeconds: 20
+            periodSeconds: 10
+          env:
+            - name: MIGRATIONS_PATH
+              value: migrations/server/postgresql
+            - name: DB_URL
+              value: postgres://postgres:changeit@harbor-database:5432/notaryserver?sslmode=disable
+          volumeMounts:
+            - name: config
+              mountPath: /etc/notary/server-config.postgres.json
+              subPath: server.json
+            - name: token-service-certificate
+              mountPath: /root.crt
+              subPath: tls.crt
+            - name: signer-certificate
+              mountPath: /etc/ssl/notary/ca.crt
+              subPath: ca.crt
+      volumes:
+        - name: config
+          secret:
+            secretName: "harbor-notary-server"
+        - name: token-service-certificate
+          secret:
+            secretName: harbor-core
+        - name: signer-certificate
+          secret:
+            secretName: harbor-notary-server

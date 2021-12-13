@@ -1,5 +1,8 @@
 filepath: ""
-environments: {}
+environments:
+  default:
+    values:
+    - jx-values.yaml
 namespace: mongodb
 repositories:
 - name: bitnami
@@ -9,10 +12,13 @@ releases:
   version: 1.0.0
   name: mongo-secrets
   namespace: mongodb
+  values:
+  - jx-values.yaml
 - chart: bitnami/mongodb
   version: 10.30.6
   name: mongodb
   values:
   - values.yaml
+  - jx-values.yaml
 templates: {}
 renderedvalues: {}

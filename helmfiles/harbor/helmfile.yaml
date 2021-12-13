@@ -1,5 +1,8 @@
 filepath: ""
-environments: {}
+environments:
+  default:
+    values:
+    - jx-values.yaml
 namespace: harbor
 repositories:
 - name: goharbor
@@ -9,10 +12,13 @@ releases:
   version: 1.0.0
   name: harbor-secrets
   namespace: harbor
+  values:
+  - jx-values.yaml
 - chart: goharbor/harbor
   version: 1.7.4
   name: harbor
   values:
   - values.yaml
+  - jx-values.yaml
 templates: {}
 renderedvalues: {}
