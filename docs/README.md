@@ -105,10 +105,10 @@
 	      <td></td>
 	    </tr>
     <tr>
-	      <td><a href='https://mongodb.org' title='NoSQL document-oriented database that stores JSON-like documents with dynamic schemas, simplifying the integration of data in content-driven applications.'> <img src='https://bitnami.com/assets/stacks/mongodb/img/mongodb-stack-220x234.png' width='24px' height='24px'> mongodb </a></td>
-	      <td>7.14.0</td>
+	      <td><a href='https://github.com/bitnami/charts/tree/master/bitnami/mongodb' title='NoSQL document-oriented database that stores JSON-like documents with dynamic schemas, simplifying the integration of data in content-driven applications.'> <img src='https://bitnami.com/assets/stacks/mongodb/img/mongodb-stack-220x234.png' width='24px' height='24px'> mongodb </a></td>
+	      <td>10.30.6</td>
 	      <td></td>
-	      <td><a href='https://mongodb.org'>source</a></td>
+	      <td><a href='https://github.com/bitnami/charts/tree/master/bitnami/mongodb'>source</a></td>
 	    </tr>
 
   </tbody>

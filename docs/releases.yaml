@@ -211,13 +211,21 @@
   - name: secrets
     repositoryName: .
     version: 1.0.0
-  - apiVersion: v1
-    appVersion: 4.2.6
+  - annotations:
+      category: Database
+    apiVersion: v2
+    appVersion: 4.4.10
+    dependencies:
+    - name: common
+      repository: https://charts.bitnami.com/bitnami
+      tags:
+      - bitnami-common
+      version: 1.x.x
     description: NoSQL document-oriented database that stores JSON-like documents
       with dynamic schemas, simplifying the integration of data in content-driven
       applications.
-    firstDeployed: "2021-12-13T03:53:54Z"
-    home: https://mongodb.org
+    firstDeployed: "2021-12-13T04:07:38Z"
+    home: https://github.com/bitnami/charts/tree/master/bitnami/mongodb
     icon: https://bitnami.com/assets/stacks/mongodb/img/mongodb-stack-220x234.png
     keywords:
     - mongodb
@@ -226,7 +234,7 @@
     - cluster
     - replicaset
     - replication
-    lastDeployed: "2021-12-13T03:53:54Z"
+    lastDeployed: "2021-12-13T04:07:38Z"
     maintainers:
     - email: containers@bitnami.com
       name: Bitnami
@@ -236,4 +244,5 @@
     resourcePath: config-root/namespaces/mongodb/mongodb
     sources:
     - https://github.com/bitnami/bitnami-docker-mongodb
-    version: 7.14.0
+    - https://mongodb.org
+    version: 10.30.6

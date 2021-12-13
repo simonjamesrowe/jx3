@@ -1,0 +1,21 @@
+# Source: mongodb/templates/standalone/pvc.yaml
+kind: PersistentVolumeClaim
+apiVersion: v1
+metadata:
+  name: mongodb
+  namespace: mongodb
+  labels:
+    app.kubernetes.io/name: mongodb
+    helm.sh/chart: mongodb-10.30.6
+    app.kubernetes.io/instance: mongodb
+    app.kubernetes.io/managed-by: Helm
+    app.kubernetes.io/component: mongodb
+    gitops.jenkins-x.io/pipeline: 'namespaces'
+  annotations:
+    meta.helm.sh/release-name: 'mongodb'
+spec:
+  accessModes:
+    - "ReadWriteOnce"
+  resources:
+    requests:
+      storage: "8Gi"

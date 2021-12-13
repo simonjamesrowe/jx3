@@ -1,0 +1,26 @@
+# Source: mongodb/templates/standalone/svc.yaml
+apiVersion: v1
+kind: Service
+metadata:
+  name: mongodb
+  namespace: mongodb
+  labels:
+    app.kubernetes.io/name: mongodb
+    helm.sh/chart: mongodb-10.30.6
+    app.kubernetes.io/instance: mongodb
+    app.kubernetes.io/managed-by: Helm
+    app.kubernetes.io/component: mongodb
+    gitops.jenkins-x.io/pipeline: 'namespaces'
+  annotations:
+    meta.helm.sh/release-name: 'mongodb'
+spec:
+  type: ClusterIP
+  ports:
+    - name: mongodb
+      port: 27017
+      targetPort: mongodb
+      nodePort: null
+  selector:
+    app.kubernetes.io/name: mongodb
+    app.kubernetes.io/instance: mongodb
+    app.kubernetes.io/component: mongodb

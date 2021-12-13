@@ -1,14 +1,14 @@
-# Source: mongodb/templates/serviceaccount.yml
+# Source: mongodb/templates/serviceaccount.yaml
 apiVersion: v1
 kind: ServiceAccount
 metadata:
   name: mongodb
   namespace: mongodb
   labels:
-    app: mongodb
-    chart: mongodb-7.14.0
-    release: "mongodb"
-    heritage: "Helm"
+    app.kubernetes.io/name: mongodb
+    helm.sh/chart: mongodb-10.30.6
+    app.kubernetes.io/instance: mongodb
+    app.kubernetes.io/managed-by: Helm
     gitops.jenkins-x.io/pipeline: 'namespaces'
   annotations:
     meta.helm.sh/release-name: 'mongodb'
