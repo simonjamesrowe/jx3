@@ -1,0 +1,6 @@
+mongodb:
+  auth:
+    existingSecret: mongo-credentials
+  username: root
+  port: "27017"
+  hostname: mongodb.mongodb

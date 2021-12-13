@@ -4,6 +4,7 @@ helmfiles:
 - path: helmfiles/kuberhealthy/helmfile.yaml
 - path: helmfiles/secret-infra/helmfile.yaml
 - path: helmfiles/tekton-pipelines/helmfile.yaml
+- path: helmfiles/mongo/helmfile.yaml
 releases:
 - chart: ./charts/acme
   version: 1.0.0
