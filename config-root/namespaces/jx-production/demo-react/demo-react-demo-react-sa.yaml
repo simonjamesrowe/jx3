@@ -1,0 +1,10 @@
+# Source: demo-react/templates/sa.yaml
+apiVersion: v1
+kind: ServiceAccount
+metadata:
+  name: demo-react-demo-react
+  annotations:
+    meta.helm.sh/release-name: 'demo-react'
+  namespace: jx-production
+  labels:
+    gitops.jenkins-x.io/pipeline: 'namespaces'
