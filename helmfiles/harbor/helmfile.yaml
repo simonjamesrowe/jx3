@@ -1,0 +1,18 @@
+filepath: ""
+environments: {}
+namespace: harbor
+repositories:
+- name: goharbor
+  url: https://helm.goharbor.io
+releases:
+- chart: ./secrets
+  version: 1.0.0
+  name: harbor-secrets
+  namespace: harbor
+- chart: goharbor/harbor
+  version: 1.7.4
+  name: harbor
+  values:
+  - values.yaml
+templates: {}
+renderedvalues: {}
