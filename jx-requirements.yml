@@ -14,7 +14,7 @@ spec:
     gitName: github
     gitServer: https://github.com
     provider: kubernetes
-    registry: ghcr.io
+    registry: harbor.simonjamesrowe.com
   environments:
   - key: dev
     owner: simonrowe
