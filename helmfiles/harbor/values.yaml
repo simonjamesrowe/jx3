@@ -34,5 +34,3 @@ clair:
 
 notary:
   enabled: false
-
-
