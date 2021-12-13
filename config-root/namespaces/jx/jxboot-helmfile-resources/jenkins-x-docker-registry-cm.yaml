@@ -11,4 +11,4 @@ metadata:
     gitops.jenkins-x.io/pipeline: 'namespaces'
 data:
   kaniko.flags: "--skip-unused-stages --snapshotMode=redo"
-  docker.registry: ghcr.io
+  docker.registry: harbor.simonjamesrowe.com
