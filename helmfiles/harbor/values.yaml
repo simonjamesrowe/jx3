@@ -1,19 +1,19 @@
 expose:
   type: ingress
-tls:
-  enabled: true
-  secret:
-    secretName: "tls-simonjamesrowe-com-p"
-ingress:
-  hosts:
-    core: harbor.simonjamesrowe.com
-  annotations:
-    ingress.kubernetes.io/ssl-redirect: "false"
-    ingress.kubernetes.io/proxy-body-size: "0"
-    nginx.ingress.kubernetes.io/proxy-read-timeout: "600"
-    nginx.ingress.kubernetes.io/proxy-send-timeout: "600"
-    nginx.ingress.kubernetes.io/ssl-redirect: "false"
-    nginx.ingress.kubernetes.io/proxy-body-size: "0"
+  tls:
+    enabled: true
+    secret:
+      secretName: "tls-simonjamesrowe-com-p"
+  ingress:
+    hosts:
+      core: harbor.simonjamesrowe.com
+    annotations:
+      ingress.kubernetes.io/ssl-redirect: "false"
+      ingress.kubernetes.io/proxy-body-size: "0"
+      nginx.ingress.kubernetes.io/proxy-read-timeout: "600"
+      nginx.ingress.kubernetes.io/proxy-send-timeout: "600"
+      nginx.ingress.kubernetes.io/ssl-redirect: "false"
+      nginx.ingress.kubernetes.io/proxy-body-size: "0"
 
 persistence:
   persistentVolumeClaim:
