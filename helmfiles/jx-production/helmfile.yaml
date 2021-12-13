@@ -1,0 +1,11 @@
+filepath: ""
+namespace: jx-production
+repositories:
+- name: dev
+  url: http://bucketrepo.jx.svc.cluster.local/bucketrepo/charts
+releases:
+- chart: dev/demo-react
+  version: 0.0.3
+  name: demo-react
+templates: {}
+renderedvalues: {}
