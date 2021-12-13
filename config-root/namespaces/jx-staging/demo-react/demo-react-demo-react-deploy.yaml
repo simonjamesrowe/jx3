@@ -5,7 +5,7 @@ metadata:
   name: demo-react-demo-react
   labels:
     draft: draft-app
-    chart: "demo-react-0.0.1"
+    chart: "demo-react-0.0.3"
     gitops.jenkins-x.io/pipeline: 'namespaces'
   annotations:
     meta.helm.sh/release-name: 'demo-react'
@@ -25,11 +25,11 @@ spec:
       serviceAccountName: demo-react-demo-react
       containers:
         - name: demo-react
-          image: "ghcr.io/simonjamesrowe/demo-react:0.0.1"
+          image: "harbor.simonjamesrowe.com/simonjamesrowe/demo-react:0.0.3"
           imagePullPolicy: IfNotPresent
           env:
             - name: VERSION
-              value: 0.0.1
+              value: 0.0.3
           envFrom: null
           ports:
             - name: http
