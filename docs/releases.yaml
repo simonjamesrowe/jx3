@@ -198,6 +198,9 @@
 - namespace: jx-staging
   path: helmfiles/jx-staging/helmfile.yaml
   releases:
+  - name: secrets
+    repositoryName: .
+    version: 1.0.0
   - apiVersion: v1
     appVersion: 0.0.3
     description: A Helm chart for Kubernetes
