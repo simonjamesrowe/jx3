@@ -1,0 +1,21 @@
+# Source: kubernetes-replicator/templates/rbac.yaml
+kind: ClusterRole
+apiVersion: rbac.authorization.k8s.io/v1
+metadata:
+  name: kubernetes-replicator
+  labels:
+    helm.sh/chart: kubernetes-replicator-2.3.0
+    app.kubernetes.io/name: kubernetes-replicator
+    app.kubernetes.io/instance: kubernetes-replicator
+    app.kubernetes.io/version: "v2.3.0"
+    app.kubernetes.io/managed-by: Helm
+    gitops.jenkins-x.io/pipeline: 'cluster'
+  annotations:
+    meta.helm.sh/release-name: 'kubernetes-replicator'
+rules:
+  - apiGroups: [""] # "" indicates the core API group
+    resources: ["secrets", "configmaps"]
+    verbs: ["get", "watch", "list", "update", "patch"]
+  - apiGroups: ["rbac.authorization.k8s.io"]
+    resources: ["roles", "rolebindings"]
+    verbs: ["get", "watch", "list", "update", "patch"]
