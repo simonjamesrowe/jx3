@@ -28,9 +28,9 @@ spec:
         app: "harbor"
         component: core
       annotations:
-        checksum/configmap: e077161ea1e86ba9b5b5b37629375770aa3ef38d5362ac2d49c74a2ad1c2b90c
-        checksum/secret: bf980f21557614231c87131edf442c6d31eda9462d7693b161ab7ef16f4cca68
-        checksum/secret-jobservice: b3b9d30409eb65b6fb5ad7906bafac813f12431299dffee33ba3a4458b9760c3
+        checksum/configmap: 60694b291eee0b9d4cbfa0cdf5110dae964fa68f04cf3296d787c78f83fba6e2
+        checksum/secret: 72416fc7d52b252cdb92a1ed786cb3024e892425918fb7daef2335df1085fdea
+        checksum/secret-jobservice: 38290ea69bf577b07df9c29581d21e61727abd68e268544a1370c06b22d7fe46
     spec:
       securityContext:
         runAsUser: 10000

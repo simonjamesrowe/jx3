@@ -8,7 +8,7 @@ metadata:
     gitops.jenkins-x.io/pipeline: 'namespaces'
   annotations:
     replicator.v1.mittwald.de/replication-allowed: "true"
-    replicator.v1.mittwald.de/replication-allowed-namespaces: "jx-staging,jx-production"
+    replicator.v1.mittwald.de/replication-allowed-namespaces: ".*"
     meta.helm.sh/release-name: 'acme'
   namespace: jx
 spec:
