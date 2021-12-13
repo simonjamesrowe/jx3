@@ -1,0 +1,16 @@
+# Source: mongodb/templates/serviceaccount.yml
+apiVersion: v1
+kind: ServiceAccount
+metadata:
+  name: mongodb
+  namespace: mongodb
+  labels:
+    app: mongodb
+    chart: mongodb-7.14.0
+    release: "mongodb"
+    heritage: "Helm"
+    gitops.jenkins-x.io/pipeline: 'namespaces'
+  annotations:
+    meta.helm.sh/release-name: 'mongodb'
+secrets:
+  - name: mongodb
