@@ -4,3 +4,4 @@ mongodb:
   username: root
   port: "27017"
   hostname: mongodb.mongodb
+  replicaCount: 1
