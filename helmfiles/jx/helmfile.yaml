@@ -8,6 +8,12 @@ repositories:
 - name: jxgh
   url: https://jenkins-x-charts.github.io/repo
 releases:
+- chart: ./secrets
+  version: 1.0.0
+  name: jx-secrets
+  namespace: jx
+  values:
+    - jx-values.yaml
 - chart: jxgh/jxboot-helmfile-resources
   version: 1.1.8
   name: jxboot-helmfile-resources
