@@ -1,0 +1,49 @@
+# Source: kubernetes-replicator/templates/deployment.yaml
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: kubernetes-replicator
+  labels:
+    helm.sh/chart: kubernetes-replicator-2.3.0
+    app.kubernetes.io/name: kubernetes-replicator
+    app.kubernetes.io/instance: kubernetes-replicator
+    app.kubernetes.io/version: "v2.3.0"
+    app.kubernetes.io/managed-by: Helm
+    gitops.jenkins-x.io/pipeline: 'namespaces'
+  annotations:
+    meta.helm.sh/release-name: 'kubernetes-replicator'
+    wave.pusher.com/update-on-config-change: 'true'
+  namespace: jx
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app.kubernetes.io/name: kubernetes-replicator
+      app.kubernetes.io/instance: kubernetes-replicator
+  template:
+    metadata:
+      labels:
+        app.kubernetes.io/name: kubernetes-replicator
+        app.kubernetes.io/instance: kubernetes-replicator
+    spec:
+      serviceAccountName: kubernetes-replicator
+      securityContext: {}
+      containers:
+        - name: kubernetes-replicator
+          securityContext: {}
+          image: "quay.io/mittwald/kubernetes-replicator:v2.3.0"
+          imagePullPolicy: Always
+          args: []
+          ports:
+            - name: health
+              containerPort: 9102
+              protocol: TCP
+          livenessProbe:
+            httpGet:
+              path: /healthz
+              port: health
+          readinessProbe:
+            httpGet:
+              path: /healthz
+              port: health
+          resources: {}

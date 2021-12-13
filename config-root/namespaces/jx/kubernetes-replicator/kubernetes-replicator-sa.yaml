@@ -1,0 +1,15 @@
+# Source: kubernetes-replicator/templates/rbac.yaml
+apiVersion: v1
+kind: ServiceAccount
+metadata:
+  name: kubernetes-replicator
+  labels:
+    helm.sh/chart: kubernetes-replicator-2.3.0
+    app.kubernetes.io/name: kubernetes-replicator
+    app.kubernetes.io/instance: kubernetes-replicator
+    app.kubernetes.io/version: "v2.3.0"
+    app.kubernetes.io/managed-by: Helm
+    gitops.jenkins-x.io/pipeline: 'namespaces'
+  annotations:
+    meta.helm.sh/release-name: 'kubernetes-replicator'
+  namespace: jx

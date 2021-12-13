@@ -1,12 +1,17 @@
 filepath: ""
-environments: {}
+environments:
+  default:
+    values:
+    - jx-values.yaml
 namespace: jx
 repositories:
-  - name: mittwald
-    url: https://helm.mittwald.de
+- name: mittwald
+  url: https://helm.mittwald.de
 releases:
-  - chart: mittwald/kubernetes-replicator
-    version: 2.3.0
-    name: kubernetes-replicator
-templates: { }
-renderedvalues: { }
+- chart: mittwald/kubernetes-replicator
+  version: 2.3.0
+  name: kubernetes-replicator
+  values:
+  - jx-values.yaml
+templates: {}
+renderedvalues: {}

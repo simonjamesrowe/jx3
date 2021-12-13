@@ -12,51 +12,6 @@
   </thead>
   <tbody>
     <tr>
-		      <td colspan='4'><h3>jx</h3></td>
-		    </tr>
-	    <tr>
-	      <td><a href='https://github.com/jenkins-x-charts/jxboot-helmfile-resources' title='A Helm chart for the resources for JX Boot'> <img src='https://raw.githubusercontent.com/jenkins-x/jenkins-x-website/master/images/logo/jenkinsx-icon-color.svg' width='24px' height='24px'> jxboot-helmfile-resources </a></td>
-	      <td>1.1.8</td>
-	      <td></td>
-	      <td><a href='https://github.com/jenkins-x-charts/jxboot-helmfile-resources'>source</a></td>
-	    </tr>
-    <tr>
-	      <td><a href='https://github.com/jenkins-x/jx-pipelines-visualizer' title='Web UI for Jenkins X, with a clear goal - visualize the pipelines - and their logs.'> <img src='https://raw.githubusercontent.com/jenkins-x/jenkins-x-website/master/images/logo/jenkinsx-icon-color.svg' width='24px' height='24px'> jx-pipelines-visualizer </a></td>
-	      <td>1.7.5</td>
-	      <td></td>
-	      <td><a href='https://github.com/jenkins-x/jx-pipelines-visualizer'>source</a></td>
-	    </tr>
-    <tr>
-	      <td><a href='https://github.com/jenkins-x-plugins/jx-preview' title='This chart installs the jx-preview CRD and garbagecollection job '> <img src='https://raw.githubusercontent.com/jenkins-x/jenkins-x-website/master/images/logo/jenkinsx-icon-color.svg' width='24px' height='24px'> jx-preview </a></td>
-	      <td>0.0.192</td>
-	      <td></td>
-	      <td><a href='https://github.com/jenkins-x-plugins/jx-preview'>source</a></td>
-	    </tr>
-    <tr>
-	      <td><a href='https://github.com/jenkins-x/lighthouse' title='This chart bootstraps installation of [Lighthouse](https://github.com/jenkins-x/lighthouse). '> <img src='https://raw.githubusercontent.com/jenkins-x/jenkins-x-website/master/images/logo/jenkinsx-icon-color.svg' width='24px' height='24px'> lighthouse </a></td>
-	      <td>1.3.2</td>
-	      <td></td>
-	      <td><a href='https://github.com/jenkins-x/lighthouse'>source</a></td>
-	    </tr>
-    <tr>
-	      <td><a href='' title='A Helm chart for bucketrepo service'> <img src='https://raw.githubusercontent.com/jenkins-x/jenkins-x-platform/d273e09/images/go.png' width='24px' height='24px'> bucketrepo </a></td>
-	      <td>0.1.67</td>
-	      <td></td>
-	      <td></td>
-	    </tr>
-    <tr>
-	      <td><a href='https://jenkins-x.io/' title='Jenkins X next gen cloud CI / CD platform for Kubernetes'> <img src='https://raw.githubusercontent.com/jenkins-x/jenkins-x-website/master/images/logo/jenkinsx-icon-color.svg' width='24px' height='24px'> jx-build-controller </a></td>
-	      <td>0.3.9</td>
-	      <td></td>
-	      <td><a href='https://jenkins-x.io/'>source</a></td>
-	    </tr>
-    <tr>
-	      <td><a href='https://jenkins-x.io/' title='Jenkins X next gen cloud CI / CD platform for Kubernetes'> <img src='https://jenkins-x.github.io/jenkins-x-website/img/profile.png' width='24px' height='24px'> jx-kh-check </a></td>
-	      <td>0.0.78</td>
-	      <td></td>
-	      <td><a href='https://jenkins-x.io/'>source</a></td>
-	    </tr>
-    <tr>
 		      <td colspan='4'><h3>kuberhealthy</h3></td>
 		    </tr>
 	    <tr>
@@ -109,6 +64,15 @@
 	      <td>10.30.6</td>
 	      <td></td>
 	      <td><a href='https://github.com/bitnami/charts/tree/master/bitnami/mongodb'>source</a></td>
+	    </tr>
+    <tr>
+		      <td colspan='4'><h3>jx</h3></td>
+		    </tr>
+	    <tr>
+	      <td><a href='' title='Controller for replicating secrets+configmaps across namespaces'> <img src='' width='24px' height='24px'> kubernetes-replicator </a></td>
+	      <td>2.3.0</td>
+	      <td></td>
+	      <td></td>
 	    </tr>
 
   </tbody>
