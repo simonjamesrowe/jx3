@@ -199,13 +199,13 @@
   path: helmfiles/jx-staging/helmfile.yaml
   releases:
   - apiVersion: v1
-    appVersion: 0.0.1
+    appVersion: 0.0.3
     description: A Helm chart for Kubernetes
-    firstDeployed: "2021-12-13T06:15:07Z"
+    firstDeployed: "2021-12-13T07:21:35Z"
     icon: https://raw.githubusercontent.com/cdfoundation/artwork/master/jenkinsx/icon/color/jenkinsx-icon-color.png
-    lastDeployed: "2021-12-13T06:15:07Z"
+    lastDeployed: "2021-12-13T07:21:35Z"
     name: demo-react
     repositoryName: dev
     repositoryUrl: http://bucketrepo.jx.svc.cluster.local/bucketrepo/charts
     resourcePath: config-root/namespaces/jx-staging/demo-react
-    version: 0.0.1
+    version: 0.0.3
