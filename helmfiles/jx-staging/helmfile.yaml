@@ -8,6 +8,12 @@ repositories:
 - name: dev
   url: http://bucketrepo.jx.svc.cluster.local/bucketrepo/charts
 releases:
+- chart: ./secrets
+  version: 1.0.0
+  name: jx-staging-secrets
+  namespace: jx-staging
+  values:
+    - jx-values.yaml
 - chart: dev/demo-react
   version: 0.0.3
   name: demo-react
