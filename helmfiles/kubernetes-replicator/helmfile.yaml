@@ -1,11 +1,11 @@
 filepath: ""
 environments: {}
-namespace: mongodb
+namespace: jx
 repositories:
   - name: mittwald
     url: https://helm.mittwald.de
 releases:
-  - chart: mittwald/mongodb
+  - chart: mittwald/kubernetes-replicator
     version: 2.3.0
     name: kubernetes-replicator
 templates: { }
