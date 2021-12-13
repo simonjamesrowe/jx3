@@ -29,8 +29,8 @@ spec:
         component: core
       annotations:
         checksum/configmap: 60694b291eee0b9d4cbfa0cdf5110dae964fa68f04cf3296d787c78f83fba6e2
-        checksum/secret: 95ff3926830849bf5ae06318c188dfd51675ef55e2eebb7600c1bf4fd1356563
-        checksum/secret-jobservice: bc6f11c95acbc3dd7c8c031de25482102c29c6411b7dd3b9afaacc0714ce4d8f
+        checksum/secret: f370b995b82f132001e0f469f66650f1b233984e9d5f382be9ecc4ddac9db728
+        checksum/secret-jobservice: b3dc25bf8607b7514189c28c8afc1eb82c2e52c789c6eee60d8fa58bda03b337
     spec:
       securityContext:
         runAsUser: 10000
@@ -113,6 +113,5 @@ spec:
             secretName: harbor-core
         - name: ca-download
           secret:
-            secretName: "harbor-ingress"
         - name: psc
           emptyDir: {}

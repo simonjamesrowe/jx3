@@ -20,7 +20,7 @@ metadata:
   namespace: harbor
 spec:
   tls:
-    - secretName: harbor-ingress
+    - secretName: tls-simonjamesrowe-com-p
       hosts:
         - harbor.simonjamesrowe.com
   rules:
