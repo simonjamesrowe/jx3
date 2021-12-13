@@ -11,16 +11,18 @@ metadata:
     gitops.jenkins-x.io/pipeline: 'namespaces'
   annotations:
     ingress.kubernetes.io/proxy-body-size: "0"
-    ingress.kubernetes.io/ssl-redirect: "true"
+    ingress.kubernetes.io/ssl-redirect: "false"
     nginx.ingress.kubernetes.io/proxy-body-size: "0"
-    nginx.ingress.kubernetes.io/ssl-redirect: "true"
+    nginx.ingress.kubernetes.io/proxy-read-timeout: "600"
+    nginx.ingress.kubernetes.io/proxy-send-timeout: "600"
+    nginx.ingress.kubernetes.io/ssl-redirect: "false"
     meta.helm.sh/release-name: 'harbor'
   namespace: harbor
 spec:
   tls:
     - secretName: harbor-ingress
       hosts:
-        - core.harbor.domain
+        - harbor.simonjamesrowe.com
   rules:
     - http:
         paths:
@@ -66,4 +68,4 @@ spec:
                 name: harbor-core
                 port:
                   number: 80
-      host: core.harbor.domain
+      host: harbor.simonjamesrowe.com
