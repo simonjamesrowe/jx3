@@ -1,0 +1,18 @@
+filepath: ""
+environments:
+  default:
+    values:
+    - jx-values.yaml
+namespace: jx
+repositories:
+- name: sonatype
+  url: https://sonatype.github.io/helm3-charts/
+releases:
+- chart: sonatype/nexus-repository-manager
+  version: 37.0.0
+  name: nexus
+  values:
+  - values.yaml
+  - jx-values.yaml
+templates: {}
+renderedvalues: {}

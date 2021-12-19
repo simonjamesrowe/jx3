@@ -1,0 +1,8 @@
+ingress:
+  tls:
+    secretName: tls-simonjamesrowe-p
+    hosts:
+      - nexus.simonjamesrowe.com
+
+persistence:
+  storageSize: 20Gi
