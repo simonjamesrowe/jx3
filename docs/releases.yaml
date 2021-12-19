@@ -149,19 +149,6 @@
     - https://github.com/bitnami/bitnami-docker-mongodb
     - https://mongodb.org
     version: 10.30.6
-- namespace: jx
-  path: helmfiles/kubernetes-replicator/helmfile.yaml
-  releases:
-  - apiVersion: v1
-    appVersion: v2.3.0
-    description: Controller for replicating secrets+configmaps across namespaces
-    firstDeployed: "2021-12-13T04:29:40Z"
-    lastDeployed: "2021-12-13T04:29:40Z"
-    name: kubernetes-replicator
-    repositoryName: mittwald
-    repositoryUrl: https://helm.mittwald.de
-    resourcePath: config-root/namespaces/jx/kubernetes-replicator
-    version: 2.3.0
 - namespace: harbor
   path: helmfiles/harbor/helmfile.yaml
   releases:
@@ -195,6 +182,38 @@
     - https://github.com/goharbor/harbor
     - https://github.com/goharbor/harbor-helm
     version: 1.7.4
+- namespace: jx
+  path: helmfiles/nexus/helmfile.yaml
+  releases:
+  - apiVersion: v2
+    appVersion: 3.37.0
+    description: Sonatype Nexus Repository Manager - Universal Binary repository
+    firstDeployed: "2021-12-19T14:58:09Z"
+    home: https://www.sonatype.com/nexus-repository-oss
+    icon: https://sonatype.github.io/helm3-charts/NexusRepo_Vertical.svg
+    keywords:
+    - artifacts
+    - dependency
+    - management
+    - sonatype
+    - nexus
+    - repository
+    - quickstart
+    - ci
+    - repository-manager
+    - nexus3
+    lastDeployed: "2021-12-19T14:58:09Z"
+    maintainers:
+    - email: support@sonatype.com
+      name: Sonatype
+    name: nexus-repository-manager
+    repositoryName: sonatype
+    repositoryUrl: https://sonatype.github.io/helm3-charts/
+    resourcePath: config-root/namespaces/jx/nexus-repository-manager-nexus
+    sources:
+    - https://github.com/sonatype/nexus-public
+    type: application
+    version: 37.0.0
 - namespace: jx-staging
   path: helmfiles/jx-staging/helmfile.yaml
   releases:

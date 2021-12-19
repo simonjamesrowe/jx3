@@ -1,0 +1,75 @@
+# Source: nexus-repository-manager/templates/deployment.yaml
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: nexus-nexus-repository-manager
+  labels:
+    helm.sh/chart: nexus-repository-manager-37.0.0
+    app.kubernetes.io/name: nexus-repository-manager
+    app.kubernetes.io/instance: nexus
+    app.kubernetes.io/version: "3.37.0"
+    app.kubernetes.io/managed-by: Helm
+    gitops.jenkins-x.io/pipeline: 'namespaces'
+  annotations:
+    meta.helm.sh/release-name: 'nexus'
+    wave.pusher.com/update-on-config-change: 'true'
+  namespace: jx
+spec:
+  replicas: 1
+  strategy:
+    type: Recreate
+  selector:
+    matchLabels:
+      app.kubernetes.io/name: nexus-repository-manager
+      app.kubernetes.io/instance: nexus
+  template:
+    metadata:
+      annotations:
+        checksum/configmap-properties: e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855
+      labels:
+        app.kubernetes.io/name: nexus-repository-manager
+        app.kubernetes.io/instance: nexus
+    spec:
+      serviceAccountName: nexus-nexus-repository-manager
+      terminationGracePeriodSeconds: 120
+      containers:
+        - name: nexus-repository-manager
+          securityContext: null
+          image: "sonatype/nexus3:3.37.0"
+          imagePullPolicy: IfNotPresent
+          lifecycle:
+          env:
+            - name: install4jAddVmParams
+              value: -Xms1200M -Xmx1200M -XX:MaxDirectMemorySize=2G -XX:+UnlockExperimentalVMOptions -XX:+UseCGroupMemoryLimitForHeap
+            - name: NEXUS_SECURITY_RANDOMPASSWORD
+              value: "true"
+          envFrom: null
+          resources: {}
+          ports:
+            - name: nexus-ui
+              containerPort: 8081
+          livenessProbe:
+            httpGet:
+              path: /
+              port: 8081
+            initialDelaySeconds: 30
+            periodSeconds: 30
+            failureThreshold: 6
+            timeoutSeconds: 10
+          readinessProbe:
+            httpGet:
+              path: /
+              port: 8081
+            initialDelaySeconds: 30
+            periodSeconds: 30
+            failureThreshold: 6
+            timeoutSeconds: 10
+          volumeMounts:
+            - mountPath: /nexus-data
+              name: nexus-repository-manager-data
+      securityContext:
+        fsGroup: 2000
+      volumes:
+        - name: nexus-repository-manager-data
+          persistentVolumeClaim:
+            claimName: nexus-nexus-repository-manager-data

@@ -66,15 +66,6 @@
 	      <td><a href='https://github.com/bitnami/charts/tree/master/bitnami/mongodb'>source</a></td>
 	    </tr>
     <tr>
-		      <td colspan='4'><h3>jx</h3></td>
-		    </tr>
-	    <tr>
-	      <td><a href='' title='Controller for replicating secrets+configmaps across namespaces'> <img src='' width='24px' height='24px'> kubernetes-replicator </a></td>
-	      <td>2.3.0</td>
-	      <td></td>
-	      <td></td>
-	    </tr>
-    <tr>
 		      <td colspan='4'><h3>harbor</h3></td>
 		    </tr>
 	    <tr>
@@ -88,6 +79,15 @@
 	      <td>1.7.4</td>
 	      <td></td>
 	      <td><a href='https://goharbor.io'>source</a></td>
+	    </tr>
+    <tr>
+		      <td colspan='4'><h3>jx</h3></td>
+		    </tr>
+	    <tr>
+	      <td><a href='https://www.sonatype.com/nexus-repository-oss' title='Sonatype Nexus Repository Manager - Universal Binary repository'> <img src='https://sonatype.github.io/helm3-charts/NexusRepo_Vertical.svg' width='24px' height='24px'> nexus-repository-manager </a></td>
+	      <td>37.0.0</td>
+	      <td></td>
+	      <td><a href='https://www.sonatype.com/nexus-repository-oss'>source</a></td>
 	    </tr>
     <tr>
 		      <td colspan='4'><h3>jx-staging</h3></td>
