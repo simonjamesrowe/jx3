@@ -1,0 +1,29 @@
+# Source: nexus-repository-manager/templates/ingress.yaml
+apiVersion: networking.k8s.io/v1beta1
+kind: Ingress
+metadata:
+  name: nexus-nexus-repository-manager
+  labels:
+    helm.sh/chart: nexus-repository-manager-37.0.0
+    app.kubernetes.io/name: nexus-repository-manager
+    app.kubernetes.io/instance: nexus
+    app.kubernetes.io/version: "3.37.0"
+    app.kubernetes.io/managed-by: Helm
+    gitops.jenkins-x.io/pipeline: 'namespaces'
+  annotations:
+    kubernetes.io/ingress.class: nginx
+    meta.helm.sh/release-name: 'nexus'
+  namespace: jx
+spec:
+  tls:
+    - hosts:
+        - "nexus.simonjamesrowe.com"
+      secretName: tls-simonjamesrowe-p
+  rules:
+    - host: repo.demo
+      http:
+        paths:
+          - path: /
+            backend:
+              serviceName: nexus-nexus-repository-manager
+              servicePort: 8081

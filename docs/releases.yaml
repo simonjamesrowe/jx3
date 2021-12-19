@@ -191,6 +191,9 @@
     firstDeployed: "2021-12-19T14:58:09Z"
     home: https://www.sonatype.com/nexus-repository-oss
     icon: https://sonatype.github.io/helm3-charts/NexusRepo_Vertical.svg
+    ingresses:
+    - name: nexus-nexus-repository-manager
+      url: https://nexus.simonjamesrowe.com
     keywords:
     - artifacts
     - dependency
