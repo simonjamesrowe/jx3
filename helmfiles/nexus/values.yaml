@@ -1,5 +1,6 @@
 ingress:
   enabled: true
+  hostRepo: nexus.simonjamesrowe.com
   tls:
     - secretName: tls-simonjamesrowe-p
       hosts:
