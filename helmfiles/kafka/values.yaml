@@ -26,8 +26,8 @@ cp-zookeeper:
   enabled: true
   servers: 1
   heapOptions: "-Xms128M -Xmx128M"
-    persistence:
-      enabled: false
+  persistence:
+    enabled: false
 
 cp-schema-registry:
   enabled: false
