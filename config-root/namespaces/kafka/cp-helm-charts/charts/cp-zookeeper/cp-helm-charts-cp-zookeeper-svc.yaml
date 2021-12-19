@@ -1,0 +1,24 @@
+# Source: cp-helm-charts/charts/cp-zookeeper/templates/service.yaml
+apiVersion: v1
+kind: Service
+metadata:
+  name: cp-helm-charts-cp-zookeeper
+  labels:
+    app: cp-zookeeper
+    chart: cp-zookeeper-0.1.0
+    release: cp-helm-charts
+    heritage: Helm
+    gitops.jenkins-x.io/pipeline: 'namespaces'
+  annotations:
+    meta.helm.sh/release-name: 'cp-helm-charts'
+  namespace: kafka
+spec:
+  type:
+  ports:
+    - port: 2181
+      name: client
+    - name: metrics
+      port: 5556
+  selector:
+    app: cp-zookeeper
+    release: cp-helm-charts

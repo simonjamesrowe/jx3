@@ -40,7 +40,7 @@ jxRequirements:
   ingress:
     domain: simonjamesrowe.com
     kind: ingress
-    namespaceSubDomain: -jx.
+    namespaceSubDomain: -kafka.
     tls:
       email: simon.rowe@gmail.com
       enabled: true

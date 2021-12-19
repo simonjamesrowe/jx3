@@ -90,6 +90,15 @@
 	      <td><a href='https://www.sonatype.com/nexus-repository-oss'>source</a></td>
 	    </tr>
     <tr>
+		      <td colspan='4'><h3>kafka</h3></td>
+		    </tr>
+	    <tr>
+	      <td><a href='' title='A Helm chart for Confluent Platform Community Edition'> <img src='' width='24px' height='24px'> cp-helm-charts </a></td>
+	      <td>0.6.0</td>
+	      <td></td>
+	      <td></td>
+	    </tr>
+    <tr>
 		      <td colspan='4'><h3>jx-staging</h3></td>
 		    </tr>
 	    <tr>

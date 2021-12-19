@@ -1,0 +1,24 @@
+# Source: cp-helm-charts/charts/cp-zookeeper/templates/headless-service.yaml
+apiVersion: v1
+kind: Service
+metadata:
+  name: cp-helm-charts-cp-zookeeper-headless
+  labels:
+    app: cp-zookeeper
+    chart: cp-zookeeper-0.1.0
+    release: cp-helm-charts
+    heritage: Helm
+    gitops.jenkins-x.io/pipeline: 'namespaces'
+  annotations:
+    meta.helm.sh/release-name: 'cp-helm-charts'
+  namespace: kafka
+spec:
+  ports:
+    - port: 2888
+      name: server
+    - port: 3888
+      name: leader-election
+  clusterIP: None
+  selector:
+    app: cp-zookeeper
+    release: cp-helm-charts
