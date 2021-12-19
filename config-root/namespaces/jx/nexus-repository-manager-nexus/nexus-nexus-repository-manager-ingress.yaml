@@ -20,7 +20,7 @@ spec:
         - "nexus.simonjamesrowe.com"
       secretName: tls-simonjamesrowe-p
   rules:
-    - host: repo.demo
+    - host: nexus.simonjamesrowe.com
       http:
         paths:
           - path: /
