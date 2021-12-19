@@ -1,0 +1,18 @@
+filepath: ""
+environments:
+  default:
+    values:
+    - jx-values.yaml
+namespace: jx
+repositories:
+- name: confluent
+  url: https://confluentinc.github.io/cp-helm-charts/
+releases:
+- chart: confluent/cp-helm-charts
+  version: 6.0.1
+  name: cp-helm-charts
+  values:
+  - values.yaml
+  - jx-values.yaml
+templates: {}
+renderedvalues: {}

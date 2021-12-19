@@ -8,6 +8,7 @@ helmfiles:
 - path: helmfiles/kubernetes-replicator/helmfile.yaml
 - path: helmfiles/harbor/helmfile.yaml
 - path: helmfiles/nexus/helmfile.yaml
+- path: helmfiles/kafka/helmfile.yaml
 - path: helmfiles/jx-staging/helmfile.yaml
 releases:
 - chart: ./charts/acme
