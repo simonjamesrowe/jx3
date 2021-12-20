@@ -259,6 +259,26 @@
     repositoryUrl: https://confluentinc.github.io/cp-helm-charts/
     resourcePath: config-root/namespaces/kafka/cp-helm-charts
     version: 0.6.0
+- namespace: elastic
+  path: helmfiles/elastic/helmfile.yaml
+  releases:
+  - apiVersion: v1
+    appVersion: 7.10.0
+    description: Official Elastic helm chart for Elasticsearch
+    firstDeployed: "2021-12-20T07:07:20Z"
+    home: https://github.com/elastic/helm-charts
+    icon: https://helm.elastic.co/icons/elasticsearch.png
+    lastDeployed: "2021-12-20T07:07:20Z"
+    maintainers:
+    - email: helm-charts@elastic.co
+      name: Elastic
+    name: elasticsearch
+    repositoryName: elastic
+    repositoryUrl: https://helm.elastic.co
+    resourcePath: config-root/namespaces/elastic/elasticsearch
+    sources:
+    - https://github.com/elastic/elasticsearch
+    version: 7.10.0
 - namespace: jx-staging
   path: helmfiles/jx-staging/helmfile.yaml
   releases:
