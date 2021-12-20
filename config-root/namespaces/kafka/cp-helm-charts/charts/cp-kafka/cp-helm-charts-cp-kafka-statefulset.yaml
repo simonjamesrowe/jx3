@@ -111,8 +111,14 @@ spec:
               value: "io.confluent.metrics.reporter.ConfluentMetricsReporter"
             - name: CONFLUENT_METRICS_REPORTER_BOOTSTRAP_SERVERS
               value: "PLAINTEXT://cp-helm-charts-cp-kafka-headless:9092"
+            - name: "KAFKA_AUTO_CREATE_TOPICS_ENABLE"
+              value: "true"
+            - name: "KAFKA_DEFAULT_REPLICATION_FACTOR"
+              value: "1"
             - name: "KAFKA_LISTENER_SECURITY_PROTOCOL_MAP"
               value: "PLAINTEXT:PLAINTEXT,EXTERNAL:PLAINTEXT"
+            - name: "KAFKA_MIN_INSYNC_REPLICAS"
+              value: "1"
             - name: "KAFKA_OFFSETS_TOPIC_REPLICATION_FACTOR"
               value: "1"
             - name: KAFKA_JMX_PORT
