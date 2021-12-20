@@ -16,8 +16,8 @@ spec:
   providerName: 'github'
   org: "simonrowe"
   repo: "jx3"
-  httpCloneURL: "https://github.com/simonjamesrowe/jx3.git"
-  url: "https://github.com/simonjamesrowe/jx3.git"
+  httpCloneURL: "https://github.com/simonrowe/jx3.git"
+  url: "https://github.com/simonrowe/jx3.git"
   scheduler:
     kind: Scheduler
     name: "in-repo"

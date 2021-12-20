@@ -18,7 +18,7 @@ spec:
   selector:
     matchLabels:
       app: "elasticsearch-master"
-  replicas: 3
+  replicas: 1
   podManagementPolicy: Parallel
   updateStrategy:
     type: RollingUpdate
@@ -30,7 +30,7 @@ spec:
           - ReadWriteOnce
         resources:
           requests:
-            storage: 30Gi
+            storage: 5Gi
   template:
     metadata:
       name: "elasticsearch-master"
@@ -82,7 +82,7 @@ spec:
                 - -c
                 - |
                   #!/usr/bin/env bash -e
-                  # If the node is starting up wait for the cluster to be ready (request params: "wait_for_status=green&timeout=1s" )
+                  # If the node is starting up wait for the cluster to be ready (request params: "wait_for_status=yellow&timeout=1s" )
                   # Once it has started only check that the node itself is responding
                   START_FILE=/tmp/.es_start_file
 
@@ -125,12 +125,12 @@ spec:
                     fi
 
                   else
-                    echo 'Waiting for elasticsearch cluster to become ready (request params: "wait_for_status=green&timeout=1s" )'
-                    if http "/_cluster/health?wait_for_status=green&timeout=1s" "--fail" ; then
+                    echo 'Waiting for elasticsearch cluster to become ready (request params: "wait_for_status=yellow&timeout=1s" )'
+                    if http "/_cluster/health?wait_for_status=yellow&timeout=1s" "--fail" ; then
                       touch ${START_FILE}
                       exit 0
                     else
-                      echo 'Cluster is not yet ready (request params: "wait_for_status=green&timeout=1s" )'
+                      echo 'Cluster is not yet ready (request params: "wait_for_status=yellow&timeout=1s" )'
                       exit 1
                     fi
                   fi
@@ -146,18 +146,18 @@ spec:
               containerPort: 9300
           resources:
             limits:
-              cpu: 1000m
-              memory: 2Gi
+              cpu: 500m
+              memory: 512M
             requests:
-              cpu: 1000m
-              memory: 2Gi
+              cpu: 500m
+              memory: 512M
           env:
             - name: node.name
               valueFrom:
                 fieldRef:
                   fieldPath: metadata.name
             - name: cluster.initial_master_nodes
-              value: "elasticsearch-master-0,elasticsearch-master-1,elasticsearch-master-2,"
+              value: "elasticsearch-master-0,"
             - name: discovery.seed_hosts
               value: "elasticsearch-master-headless"
             - name: cluster.name
@@ -165,7 +165,7 @@ spec:
             - name: network.host
               value: "0.0.0.0"
             - name: ES_JAVA_OPTS
-              value: "-Xmx1g -Xms1g"
+              value: "-Xmx256m -Xms256m"
             - name: node.data
               value: "true"
             - name: node.ingest
