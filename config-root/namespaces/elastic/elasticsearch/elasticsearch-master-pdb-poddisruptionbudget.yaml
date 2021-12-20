@@ -1,0 +1,15 @@
+# Source: elasticsearch/templates/poddisruptionbudget.yaml
+apiVersion: policy/v1beta1
+kind: PodDisruptionBudget
+metadata:
+  name: "elasticsearch-master-pdb"
+  annotations:
+    meta.helm.sh/release-name: 'elasticsearch'
+  namespace: elastic
+  labels:
+    gitops.jenkins-x.io/pipeline: 'namespaces'
+spec:
+  maxUnavailable: 1
+  selector:
+    matchLabels:
+      app: "elasticsearch-master"
