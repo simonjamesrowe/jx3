@@ -102,6 +102,12 @@
 		      <td colspan='4'><h3>elastic</h3></td>
 		    </tr>
 	    <tr>
+	      <td><a href='' title=''> <img src='' width='24px' height='24px'> secrets </a></td>
+	      <td>1.0.0</td>
+	      <td></td>
+	      <td></td>
+	    </tr>
+    <tr>
 	      <td><a href='https://github.com/elastic/helm-charts' title='Official Elastic helm chart for Kibana'> <img src='https://helm.elastic.co/icons/kibana.png' width='24px' height='24px'> kibana </a></td>
 	      <td>7.10.0</td>
 	      <td><a href='https://kibana.simonjamesrowe.com'>view</a></td>

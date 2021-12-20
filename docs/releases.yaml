@@ -262,6 +262,9 @@
 - namespace: elastic
   path: helmfiles/kibana/helmfile.yaml
   releases:
+  - name: secrets
+    repositoryName: .
+    version: 1.0.0
   - apiVersion: v1
     appVersion: 7.10.0
     applicationUrl: https://kibana.simonjamesrowe.com
