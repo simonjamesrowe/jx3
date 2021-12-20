@@ -8,6 +8,12 @@ repositories:
 - name: elastic
   url: https://helm.elastic.co
 releases:
+- chart: ./secrets
+  version: 1.0.0
+  name: jx-elastic-secrets
+  namespace: elastic
+  values:
+    - jx-values.yaml
 - chart: elastic/kibana
   version: 7.10.0
   name: kibana
