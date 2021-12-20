@@ -1,16 +1,15 @@
-elasticsearch:
-  esJavaOpts: -Xmx256m -Xms256m
-  replicas: 1
-  clusterHealthCheckParams: "wait_for_status=yellow&timeout=1s"
-  volumeClaimTemplate:
-    accessModes: [ "ReadWriteOnce" ]
-    resources:
-      requests:
-        storage: 5Gi
+esJavaOpts: -Xmx256m -Xms256m
+replicas: 1
+clusterHealthCheckParams: "wait_for_status=yellow&timeout=1s"
+volumeClaimTemplate:
+  accessModes: [ "ReadWriteOnce" ]
   resources:
     requests:
-      cpu: 500m
-      memory: 512M
-    limits:
-      cpu: 500m
-      memory: 512M
+      storage: 5Gi
+resources:
+  requests:
+    cpu: 500m
+    memory: 512M
+  limits:
+    cpu: 500m
+    memory: 512M

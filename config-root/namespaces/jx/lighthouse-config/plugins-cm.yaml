@@ -4,7 +4,7 @@ data:
     approve:
     - lgtm_acts_as_approve: true
       repos:
-      - simonrowe/jx3
+      - simonjamesrowe/jx3
       require_self_approval: true
     - lgtm_acts_as_approve: true
       repos:
@@ -25,7 +25,7 @@ data:
         name: cd-indicators
       - endpoint: http://lighthouse-webui-plugin.jx.svc.cluster.local/lighthouse/events
         name: lighthouse-webui-plugin
-      simonrowe/jx3:
+      simonjamesrowe/jx3:
       - endpoint: http://cd-indicators.jx.svc.cluster.local/lighthouse/events
         name: cd-indicators
       - endpoint: http://lighthouse-webui-plugin.jx.svc.cluster.local/lighthouse/events
@@ -51,7 +51,7 @@ data:
       - cat
       - dog
       - pony
-      simonrowe/jx3:
+      simonjamesrowe/jx3:
       - config-updater
       - approve
       - assign
@@ -78,7 +78,7 @@ data:
       xxl: 0
     triggers:
     - repos:
-      - simonrowe/jx3
+      - simonjamesrowe/jx3
       trusted_org: todo
     - repos:
       - simonjamesrowe/demo-react

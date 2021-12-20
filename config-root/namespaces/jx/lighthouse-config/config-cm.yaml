@@ -8,7 +8,7 @@ data:
     in_repo_config:
       enabled:
         simonjamesrowe/demo-react: true
-        simonrowe/jx3: true
+        simonjamesrowe/jx3: true
     plank: {}
     pod_namespace: jx
     prowjob_namespace: jx
@@ -21,7 +21,7 @@ data:
         skip-unknown-contexts: false
       merge_method:
         simonjamesrowe/demo-react: merge
-        simonrowe/jx3: merge
+        simonjamesrowe/jx3: merge
       queries:
       - labels:
         - approved
@@ -32,7 +32,7 @@ data:
         - needs-ok-to-test
         - needs-rebase
         repos:
-        - simonrowe/jx3
+        - simonjamesrowe/jx3
         - simonjamesrowe/demo-react
       - labels:
         - updatebot
@@ -43,7 +43,7 @@ data:
         - needs-ok-to-test
         - needs-rebase
         repos:
-        - simonrowe/jx3
+        - simonjamesrowe/jx3
         - simonjamesrowe/demo-react
       target_url: http://lighthouse-jx.simonjamesrowe.com/merge/status
 kind: ConfigMap
