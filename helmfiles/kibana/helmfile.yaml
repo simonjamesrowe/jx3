@@ -10,7 +10,7 @@ repositories:
 releases:
 - chart: ./secrets
   version: 1.0.0
-  name: jx-elastic-secrets
+  name: elastic-secrets
   namespace: elastic
   values:
     - jx-values.yaml
