@@ -1,0 +1,18 @@
+filepath: ""
+environments:
+  default:
+    values:
+    - jx-values.yaml
+namespace: elastic
+repositories:
+- name: elastic
+  url: https://helm.elastic.co
+releases:
+- chart: elastic/cp-helm-charts
+  version: 7.10.0
+  name: elasticsearch
+  values:
+  - values.yaml
+  - jx-values.yaml
+templates: {}
+renderedvalues: {}
