@@ -260,24 +260,28 @@
     resourcePath: config-root/namespaces/kafka/cp-helm-charts
     version: 0.6.0
 - namespace: elastic
-  path: helmfiles/elastic/helmfile.yaml
+  path: helmfiles/kibana/helmfile.yaml
   releases:
   - apiVersion: v1
     appVersion: 7.10.0
-    description: Official Elastic helm chart for Elasticsearch
-    firstDeployed: "2021-12-20T07:07:20Z"
+    applicationUrl: https://kibana.simonjamesrowe.com
+    description: Official Elastic helm chart for Kibana
+    firstDeployed: "2021-12-20T07:42:41Z"
     home: https://github.com/elastic/helm-charts
-    icon: https://helm.elastic.co/icons/elasticsearch.png
-    lastDeployed: "2021-12-20T07:07:20Z"
+    icon: https://helm.elastic.co/icons/kibana.png
+    ingresses:
+    - name: kibana-kibana
+      url: https://kibana.simonjamesrowe.com
+    lastDeployed: "2021-12-20T07:42:41Z"
     maintainers:
     - email: helm-charts@elastic.co
       name: Elastic
-    name: elasticsearch
+    name: kibana
     repositoryName: elastic
     repositoryUrl: https://helm.elastic.co
-    resourcePath: config-root/namespaces/elastic/elasticsearch
+    resourcePath: config-root/namespaces/elastic/kibana
     sources:
-    - https://github.com/elastic/elasticsearch
+    - https://github.com/elastic/kibana
     version: 7.10.0
 - namespace: jx-staging
   path: helmfiles/jx-staging/helmfile.yaml

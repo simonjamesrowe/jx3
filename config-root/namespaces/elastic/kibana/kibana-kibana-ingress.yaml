@@ -1,0 +1,27 @@
+# Source: kibana/templates/ingress.yaml
+apiVersion: networking.k8s.io/v1beta1
+kind: Ingress
+metadata:
+  name: kibana-kibana
+  labels:
+    app: kibana
+    release: "kibana"
+    heritage: Helm
+    gitops.jenkins-x.io/pipeline: 'namespaces'
+  annotations:
+    kubernetes.io/ingress.class: nginx
+    meta.helm.sh/release-name: 'kibana'
+  namespace: elastic
+spec:
+  tls:
+    - hosts:
+        - kibana.simonjamesrowe.com
+      secretName: tls-simonjamesrowe-com-p
+  rules:
+    - host: kibana.simonjamesrowe.com
+      http:
+        paths:
+          - path: /
+            backend:
+              serviceName: kibana-kibana
+              servicePort: 5601
