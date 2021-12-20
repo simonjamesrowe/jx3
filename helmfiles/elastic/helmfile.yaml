@@ -8,7 +8,7 @@ repositories:
 - name: elastic
   url: https://helm.elastic.co
 releases:
-- chart: elastic/cp-helm-charts
+- chart: elastic/elasticsearch
   version: 7.10.0
   name: elasticsearch
   values:
