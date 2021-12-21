@@ -1,9 +1,6 @@
-mongodb:
-  auth:
-    existingSecret: mongo-credentials
-  username: root
-  port: "27017"
-  hostname: mongodb.mongodb
-  replicaCount: 1
-image:
-  tag: 4.2.17
+auth:
+  existingSecret: mongo-credentials
+username: root
+port: "27017"
+hostname: mongodb.mongodb
+replicaCount: 1
