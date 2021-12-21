@@ -5,5 +5,5 @@ mongodb:
   port: "27017"
   hostname: mongodb.mongodb
   replicaCount: 1
-  image:
-    tag: 4.2.17
+image:
+  tag: 4.2.17
