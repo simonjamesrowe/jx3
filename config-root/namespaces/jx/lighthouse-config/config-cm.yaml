@@ -8,6 +8,7 @@ data:
     in_repo_config:
       enabled:
         simonjamesrowe/demo-react: true
+        simonjamesrowe/strapi-cms: true
         simonrowe/jx3: true
     plank: {}
     pod_namespace: jx
@@ -21,6 +22,7 @@ data:
         skip-unknown-contexts: false
       merge_method:
         simonjamesrowe/demo-react: merge
+        simonjamesrowe/strapi-cms: merge
         simonrowe/jx3: merge
       queries:
       - labels:
@@ -34,6 +36,7 @@ data:
         repos:
         - simonrowe/jx3
         - simonjamesrowe/demo-react
+        - simonjamesrowe/strapi-cms
       - labels:
         - updatebot
         missingLabels:
@@ -45,6 +48,7 @@ data:
         repos:
         - simonrowe/jx3
         - simonjamesrowe/demo-react
+        - simonjamesrowe/strapi-cms
       target_url: http://lighthouse-jx.simonjamesrowe.com/merge/status
 kind: ConfigMap
 metadata:
