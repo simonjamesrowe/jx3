@@ -1,0 +1,22 @@
+apiVersion: jenkins.io/v1
+kind: SourceRepository
+metadata:
+  creationTimestamp: null
+  labels:
+    owner: simonjamesrowe
+    provider: github
+    repository: strapi-cms
+    gitops.jenkins-x.io/pipeline: 'namespaces'
+  name: simonjamesrowe-strapi-cms
+  namespace: jx
+spec:
+  httpCloneURL: https://github.com/simonjamesrowe/strapi-cms.git
+  org: simonjamesrowe
+  provider: https://github.com
+  providerKind: github
+  providerName: github
+  repo: strapi-cms
+  scheduler:
+    kind: ""
+    name: in-repo
+  url: https://github.com/simonjamesrowe/strapi-cms
