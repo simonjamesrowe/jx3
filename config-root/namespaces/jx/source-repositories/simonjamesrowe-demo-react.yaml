@@ -1,22 +1,26 @@
-apiVersion: jenkins.io/v1
-kind: SourceRepository
+---
+kind: "SourceRepository"
+apiVersion: "jenkins.io/v1"
 metadata:
-  creationTimestamp: null
+  creationTimestamp: "2021-12-13T06:04:57Z"
+  generation: 1
   labels:
-    owner: simonjamesrowe
-    provider: github
-    repository: demo-react
-    gitops.jenkins-x.io/pipeline: 'namespaces'
-  name: simonjamesrowe-demo-react
-  namespace: jx
+    gitops.jenkins-x.io/pipeline: "namespaces"
+    owner: "simonjamesrowe"
+    provider: "github"
+    repository: "demo-react"
+  name: "simonjamesrowe-demo-react"
+  namespace: "jx"
+  resourceVersion: "8642403"
+  uid: "b162354a-9d97-4421-9ea3-9ac1214cfe4c"
 spec:
-  httpCloneURL: https://github.com/simonjamesrowe/demo-react.git
-  org: simonjamesrowe
-  provider: https://github.com
-  providerKind: github
-  providerName: github
-  repo: demo-react
+  httpCloneURL: "https://github.com/simonjamesrowe/demo-react.git"
+  org: "simonjamesrowe"
+  provider: "https://github.com"
+  providerKind: "github"
+  providerName: "github"
+  repo: "demo-react"
   scheduler:
     kind: ""
-    name: in-repo
-  url: https://github.com/simonjamesrowe/demo-react
+    name: "in-repo"
+  url: "https://github.com/simonjamesrowe/demo-react"

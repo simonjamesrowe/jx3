@@ -1,0 +1,29 @@
+filepath: ""
+environments:
+  default:
+    values:
+    - jx-values.yaml
+namespace: jx-production
+repositories:
+- name: dev
+  url: http://bucketrepo.jx.svc.cluster.local/bucketrepo/charts
+- name: gruntwork
+  url: https://helmcharts.gruntwork.io
+releases:
+- chart: ./secrets
+  version: 1.0.0
+  name: jx-production-secrets
+  namespace: jx-production
+  values:
+  - jx-values.yaml
+- chart: gruntwork/k8s-service
+  version: 0.2.9
+  name: cms
+  namespace: jx-production
+  values:
+    - cms.yaml
+    - jx-values.yaml
+
+
+templates: {}
+renderedvalues: {}
