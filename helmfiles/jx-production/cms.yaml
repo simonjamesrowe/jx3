@@ -124,29 +124,29 @@ horizontalPodAutoscaler:
   minReplicas: 1
   maxReplicas: 10
 
-  customResources:
-    enabled: true
-    resources:
-      pvc: |
-        apiVersion: v1
-        kind: PersistentVolumeClaim
-        metadata:
-          name: strapi-uploads-claim
-        spec:
-          accessModes:
-            - ReadWriteOnce
-          resources:
-            requests:
-              storage: 20Gi
-      mongo-credentials: |
-        apiVersion: v1
-        data: {}
-        kind: Secret
-        metadata:
-          annotations:
-            replicator.v1.mittwald.de/replicate-from: mongodb/mongo-credentials
-          name: "mongo-credentials"
-        type: Opaque
+customResources:
+  enabled: true
+  resources:
+    pvc: |
+      apiVersion: v1
+      kind: PersistentVolumeClaim
+      metadata:
+        name: strapi-uploads-claim
+      spec:
+        accessModes:
+          - ReadWriteOnce
+        resources:
+          requests:
+            storage: 20Gi
+    mongo-credentials: |
+      apiVersion: v1
+      data: {}
+      kind: Secret
+      metadata:
+        annotations:
+          replicator.v1.mittwald.de/replicate-from: mongodb/mongo-credentials
+        name: "mongo-credentials"
+      type: Opaque
 
 fullnameOverride: ""
 
