@@ -1,3 +1,5 @@
+applicationName: cms
+
 containerImage:
   repository: harbor.simonjamesrowe.com/simonjamesrowe/strapi-cms
   tag: 0.0.24
