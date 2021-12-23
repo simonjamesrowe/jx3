@@ -11,6 +11,7 @@ helmfiles:
 - path: helmfiles/kafka/helmfile.yaml
 - path: helmfiles/elastic/helmfile.yaml
 - path: helmfiles/kibana/helmfile.yaml
+- path: helmfiles/postgres/helmfile.yaml
 - path: helmfiles/jx-production/helmfile.yaml
 releases:
 - chart: ./charts/acme

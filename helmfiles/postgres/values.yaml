@@ -1,0 +1,4 @@
+postgresqlDatabase: sonar
+existingSecret: postgres-credentials
+persistence:
+  size: 10Gi
