@@ -286,6 +286,46 @@
     sources:
     - https://github.com/elastic/kibana
     version: 7.10.0
+- namespace: postgres
+  path: helmfiles/postgres/helmfile.yaml
+  releases:
+  - name: secrets
+    repositoryName: .
+    version: 1.0.0
+  - annotations:
+      category: Database
+    apiVersion: v2
+    appVersion: 11.14.0
+    dependencies:
+    - name: common
+      repository: https://charts.bitnami.com/bitnami
+      version: 1.x.x
+    description: Chart for PostgreSQL, an object-relational database management system
+      (ORDBMS) with an emphasis on extensibility and on standards-compliance.
+    firstDeployed: "2021-12-23T23:07:04Z"
+    home: https://github.com/bitnami/charts/tree/master/bitnami/postgresql
+    icon: https://bitnami.com/assets/stacks/postgresql/img/postgresql-stack-220x234.png
+    keywords:
+    - postgresql
+    - postgres
+    - database
+    - sql
+    - replication
+    - cluster
+    lastDeployed: "2021-12-23T23:07:04Z"
+    maintainers:
+    - email: containers@bitnami.com
+      name: Bitnami
+    - email: cedric@desaintmartin.fr
+      name: desaintmartin
+    name: postgresql
+    repositoryName: bitnami
+    repositoryUrl: https://charts.bitnami.com/bitnami
+    resourcePath: config-root/namespaces/postgres/postgresql
+    sources:
+    - https://github.com/bitnami/bitnami-docker-postgresql
+    - https://www.postgresql.org/
+    version: 10.13.15
 - namespace: jx-production
   path: helmfiles/jx-production/helmfile.yaml
   releases:
