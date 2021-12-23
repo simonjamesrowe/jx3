@@ -9,6 +9,7 @@ spec:
     providerKind: github
     repositories:
     - name: demo-react
+    - name: jenkinsx-buildpacks
     - name: strapi-cms
     scheduler: in-repo
   slack:

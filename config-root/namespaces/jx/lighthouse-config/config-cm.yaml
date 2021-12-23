@@ -8,6 +8,7 @@ data:
     in_repo_config:
       enabled:
         simonjamesrowe/demo-react: true
+        simonjamesrowe/jenkinsx-buildpacks: true
         simonjamesrowe/strapi-cms: true
         simonrowe/jx3: true
     plank: {}
@@ -22,6 +23,7 @@ data:
         skip-unknown-contexts: false
       merge_method:
         simonjamesrowe/demo-react: merge
+        simonjamesrowe/jenkinsx-buildpacks: merge
         simonjamesrowe/strapi-cms: merge
         simonrowe/jx3: merge
       queries:
@@ -36,6 +38,7 @@ data:
         repos:
         - simonrowe/jx3
         - simonjamesrowe/demo-react
+        - simonjamesrowe/jenkinsx-buildpacks
         - simonjamesrowe/strapi-cms
       - labels:
         - updatebot
@@ -48,6 +51,7 @@ data:
         repos:
         - simonrowe/jx3
         - simonjamesrowe/demo-react
+        - simonjamesrowe/jenkinsx-buildpacks
         - simonjamesrowe/strapi-cms
       target_url: http://lighthouse-jx.simonjamesrowe.com/merge/status
 kind: ConfigMap

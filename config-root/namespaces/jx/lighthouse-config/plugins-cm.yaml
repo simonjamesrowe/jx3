@@ -12,6 +12,10 @@ data:
       require_self_approval: true
     - lgtm_acts_as_approve: true
       repos:
+      - simonjamesrowe/jenkinsx-buildpacks
+      require_self_approval: true
+    - lgtm_acts_as_approve: true
+      repos:
       - simonjamesrowe/strapi-cms
       require_self_approval: true
     cat: {}
@@ -25,6 +29,11 @@ data:
           name: plugins
     external_plugins:
       simonjamesrowe/demo-react:
+      - endpoint: http://cd-indicators.jx.svc.cluster.local/lighthouse/events
+        name: cd-indicators
+      - endpoint: http://lighthouse-webui-plugin.jx.svc.cluster.local/lighthouse/events
+        name: lighthouse-webui-plugin
+      simonjamesrowe/jenkinsx-buildpacks:
       - endpoint: http://cd-indicators.jx.svc.cluster.local/lighthouse/events
         name: cd-indicators
       - endpoint: http://lighthouse-webui-plugin.jx.svc.cluster.local/lighthouse/events
@@ -45,6 +54,22 @@ data:
     owners: {}
     plugins:
       simonjamesrowe/demo-react:
+      - approve
+      - assign
+      - blunderbuss
+      - help
+      - hold
+      - lgtm
+      - lifecycle
+      - override
+      - size
+      - trigger
+      - wip
+      - heart
+      - cat
+      - dog
+      - pony
+      simonjamesrowe/jenkinsx-buildpacks:
       - approve
       - assign
       - blunderbuss
@@ -107,6 +132,9 @@ data:
       trusted_org: todo
     - repos:
       - simonjamesrowe/demo-react
+      trusted_org: todo
+    - repos:
+      - simonjamesrowe/jenkinsx-buildpacks
       trusted_org: todo
     - repos:
       - simonjamesrowe/strapi-cms
