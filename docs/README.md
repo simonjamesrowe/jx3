@@ -114,6 +114,21 @@
 	      <td><a href='https://github.com/elastic/helm-charts'>source</a></td>
 	    </tr>
     <tr>
+		      <td colspan='4'><h3>postgres</h3></td>
+		    </tr>
+	    <tr>
+	      <td><a href='' title=''> <img src='' width='24px' height='24px'> secrets </a></td>
+	      <td>1.0.0</td>
+	      <td></td>
+	      <td></td>
+	    </tr>
+    <tr>
+	      <td><a href='https://github.com/bitnami/charts/tree/master/bitnami/postgresql' title='Chart for PostgreSQL, an object-relational database management system (ORDBMS) with an emphasis on extensibility and on standards-compliance.'> <img src='https://bitnami.com/assets/stacks/postgresql/img/postgresql-stack-220x234.png' width='24px' height='24px'> postgresql </a></td>
+	      <td>10.13.15</td>
+	      <td></td>
+	      <td><a href='https://github.com/bitnami/charts/tree/master/bitnami/postgresql'>source</a></td>
+	    </tr>
+    <tr>
 		      <td colspan='4'><h3>jx-production</h3></td>
 		    </tr>
 	    <tr>

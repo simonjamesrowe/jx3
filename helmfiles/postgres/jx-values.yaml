@@ -40,7 +40,7 @@ jxRequirements:
   ingress:
     domain: simonjamesrowe.com
     kind: ingress
-    namespaceSubDomain: -mongodb.
+    namespaceSubDomain: -postgres.
     tls:
       email: simon.rowe@gmail.com
       enabled: true
