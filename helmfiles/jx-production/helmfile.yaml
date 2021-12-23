@@ -21,9 +21,7 @@ releases:
   name: cms
   namespace: jx-production
   values:
-    - cms.yaml
-    - jx-values.yaml
-
-
+  - cms.yaml
+  - jx-values.yaml
 templates: {}
 renderedvalues: {}

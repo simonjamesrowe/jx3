@@ -1,0 +1,83 @@
+# Source: k8s-service/templates/deployment.yaml
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: cms
+  labels:
+    # These labels are required by helm. You can read more about required labels in the chart best practices guide:
+    # https://docs.helm.sh/chart_best_practices/#standard-labels
+    helm.sh/chart: k8s-service-v0.2.9
+    app.kubernetes.io/name: cms
+    app.kubernetes.io/instance: cms
+    app.kubernetes.io/managed-by: Helm
+    gitops.jenkins-x.io/pipeline: 'namespaces'
+  annotations:
+    meta.helm.sh/release-name: 'cms'
+    wave.pusher.com/update-on-config-change: 'true'
+  namespace: jx-production
+spec:
+  replicas: 1
+  strategy:
+    type: RollingUpdate
+  selector:
+    matchLabels:
+      app.kubernetes.io/name: cms
+      app.kubernetes.io/instance: cms
+      gruntwork.io/deployment-type: main
+  template:
+    metadata:
+      labels:
+        app.kubernetes.io/name: cms
+        app.kubernetes.io/instance: cms
+        gruntwork.io/deployment-type: main
+    spec:
+      containers:
+        - name: cms
+          image: "harbor.simonjamesrowe.com/simonjamesrowe/strapi-cms:0.0.24"
+          imagePullPolicy: IfNotPresent
+          ports:
+            - name: http
+              containerPort: 1337
+              protocol: TCP
+          livenessProbe:
+            httpGet:
+              path: /
+              port: http
+          readinessProbe:
+            httpGet:
+              path: /
+              port: http
+          resources:
+            limits:
+              cpu: 400m
+              memory: 256Mi
+            requests:
+              cpu: 200m
+              memory: 128Mi
+          # Include a preStop hook with a shutdown delay for eventual consistency reasons.
+          # See https://blog.gruntwork.io/delaying-shutdown-to-wait-for-pod-deletion-propagation-445f779a8304
+          lifecycle:
+            preStop:
+              exec:
+                command:
+                  - sleep
+                  - "5"
+          env:
+            - name: DATABASE_HOST
+              value: "mongodb.mongodb"
+            - name: DATABASE_NAME
+              value: "cms"
+            - name: DATABASE_USERNAME
+              value: "root"
+            - name: "DATABASE_PASSWORD"
+              valueFrom:
+                secretKeyRef:
+                  name: mongo-credentials
+                  key: mongodb-password
+          volumeMounts:
+            - name: uploads
+              mountPath: "/app/public/uploads"
+      volumes:
+        - name: uploads
+          persistentVolumeClaim:
+            claimName: strapi-uploads-claim

@@ -40,7 +40,7 @@ jxRequirements:
   ingress:
     domain: simonjamesrowe.com
     kind: ingress
-    namespaceSubDomain: -jx-staging.
+    namespaceSubDomain: -jx-production.
     tls:
       email: simon.rowe@gmail.com
       enabled: true

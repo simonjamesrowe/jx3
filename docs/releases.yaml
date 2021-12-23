@@ -286,20 +286,23 @@
     sources:
     - https://github.com/elastic/kibana
     version: 7.10.0
-- namespace: jx-staging
-  path: helmfiles/jx-staging/helmfile.yaml
+- namespace: jx-production
+  path: helmfiles/jx-production/helmfile.yaml
   releases:
   - name: secrets
     repositoryName: .
     version: 1.0.0
   - apiVersion: v1
-    appVersion: 0.0.3
-    description: A Helm chart for Kubernetes
-    firstDeployed: "2021-12-13T07:21:35Z"
-    icon: https://raw.githubusercontent.com/cdfoundation/artwork/master/jenkinsx/icon/color/jenkinsx-icon-color.png
-    lastDeployed: "2021-12-13T07:21:35Z"
-    name: demo-react
-    repositoryName: dev
-    repositoryUrl: http://bucketrepo.jx.svc.cluster.local/bucketrepo/charts
-    resourcePath: config-root/namespaces/jx-staging/demo-react
-    version: 0.0.3
+    description: A Helm chart to package your application container for Kubernetes
+    firstDeployed: "2021-12-23T08:04:51Z"
+    home: https://github.com/gruntwork-io/helm-kubernetes-services
+    lastDeployed: "2021-12-23T08:04:51Z"
+    maintainers:
+    - email: info@gruntwork.io
+      name: Gruntwork
+      url: https://gruntwork.io
+    name: k8s-service
+    repositoryName: gruntwork
+    repositoryUrl: https://helmcharts.gruntwork.io
+    resourcePath: config-root/namespaces/jx-production/k8s-service-cms
+    version: 0.2.9

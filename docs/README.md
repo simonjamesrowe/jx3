@@ -114,7 +114,7 @@
 	      <td><a href='https://github.com/elastic/helm-charts'>source</a></td>
 	    </tr>
     <tr>
-		      <td colspan='4'><h3>jx-staging</h3></td>
+		      <td colspan='4'><h3>jx-production</h3></td>
 		    </tr>
 	    <tr>
 	      <td><a href='' title=''> <img src='' width='24px' height='24px'> secrets </a></td>
@@ -123,10 +123,10 @@
 	      <td></td>
 	    </tr>
     <tr>
-	      <td><a href='' title='A Helm chart for Kubernetes'> <img src='https://raw.githubusercontent.com/cdfoundation/artwork/master/jenkinsx/icon/color/jenkinsx-icon-color.png' width='24px' height='24px'> demo-react </a></td>
-	      <td>0.0.3</td>
+	      <td><a href='https://github.com/gruntwork-io/helm-kubernetes-services' title='A Helm chart to package your application container for Kubernetes'> <img src='' width='24px' height='24px'> k8s-service </a></td>
+	      <td>0.2.9</td>
 	      <td></td>
-	      <td></td>
+	      <td><a href='https://github.com/gruntwork-io/helm-kubernetes-services'>source</a></td>
 	    </tr>
 
   </tbody>

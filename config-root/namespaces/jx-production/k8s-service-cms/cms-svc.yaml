@@ -1,0 +1,26 @@
+# Source: k8s-service/templates/service.yaml
+apiVersion: v1
+kind: Service
+metadata:
+  name: cms
+  labels:
+    # These labels are required by helm. You can read more about required labels in the chart best practices guide:
+    # https://docs.helm.sh/chart_best_practices/#standard-labels
+    app.kubernetes.io/name: cms
+    helm.sh/chart: k8s-service-v0.2.9
+    app.kubernetes.io/instance: cms
+    app.kubernetes.io/managed-by: Helm
+    gitops.jenkins-x.io/pipeline: 'namespaces'
+  annotations:
+    meta.helm.sh/release-name: 'cms'
+  namespace: jx-production
+spec:
+  type: ClusterIP
+  ports:
+    - name: app
+      port: 80
+      protocol: TCP
+      targetPort: http
+  selector:
+    app.kubernetes.io/name: cms
+    app.kubernetes.io/instance: cms

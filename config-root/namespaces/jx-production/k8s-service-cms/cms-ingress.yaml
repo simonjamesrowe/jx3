@@ -1,0 +1,38 @@
+# Source: k8s-service/templates/ingress.yaml
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: cms
+  labels:
+    gruntwork.io/app-name: cms
+    # These labels are required by helm. You can read more about required labels in the chart best practices guide:
+    # https://docs.helm.sh/chart_best_practices/#standard-labels
+    app.kubernetes.io/name: cms
+    helm.sh/chart: k8s-service-v0.2.9
+    app.kubernetes.io/instance: cms
+    app.kubernetes.io/managed-by: Helm
+    gitops.jenkins-x.io/pipeline: 'namespaces'
+  annotations:
+    kubernetes.io/ingress.allow-http: "false"
+    kubernetes.io/ingress.class: nginx
+    nginx.ingress.kubernetes.io/app-root: /admin
+    nginx.ingress.kubernetes.io/force-ssl-redirect: "true"
+    nginx.ingress.kubernetes.io/proxy-body-size: 20m
+    meta.helm.sh/release-name: 'cms'
+  namespace: jx-production
+spec:
+  tls:
+    - hosts:
+        - admin.simonjamesrowe.com
+      secretName: tls-simonjamesrowe-com-p
+  rules:
+    - host: "admin.simonjamesrowe.com"
+      http:
+        paths:
+          - path: /
+            pathType: Prefix
+            backend:
+              service:
+                name: cms
+                port:
+                  name: app
