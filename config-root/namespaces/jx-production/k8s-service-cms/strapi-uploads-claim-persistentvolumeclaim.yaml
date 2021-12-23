@@ -1,0 +1,16 @@
+# Source: k8s-service/templates/customresources.yaml
+apiVersion: v1
+kind: PersistentVolumeClaim
+metadata:
+  name: strapi-uploads-claim
+  annotations:
+    meta.helm.sh/release-name: 'cms'
+  namespace: jx-production
+  labels:
+    gitops.jenkins-x.io/pipeline: 'namespaces'
+spec:
+  accessModes:
+    - ReadWriteOnce
+  resources:
+    requests:
+      storage: 20Gi
