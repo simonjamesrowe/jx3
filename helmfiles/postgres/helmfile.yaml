@@ -15,8 +15,8 @@ releases:
   values:
   - jx-values.yaml
 - chart: bitnami/postgresql
-  version: 14.1.0
-  name: postgres
+  version: 10.13.15
+  name: postgresql
   values:
   - values.yaml
   - jx-values.yaml
