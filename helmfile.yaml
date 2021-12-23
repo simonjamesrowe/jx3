@@ -11,7 +11,7 @@ helmfiles:
 - path: helmfiles/kafka/helmfile.yaml
 - path: helmfiles/elastic/helmfile.yaml
 - path: helmfiles/kibana/helmfile.yaml
-- path: helmfiles/jx-staging/helmfile.yaml
+- path: helmfiles/jx-production/helmfile.yaml
 releases:
 - chart: ./charts/acme
   version: 1.0.0
