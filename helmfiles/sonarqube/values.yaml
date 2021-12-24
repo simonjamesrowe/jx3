@@ -5,7 +5,7 @@ ingress:
   tls:
     - hosts:
         - sonarqube.simonjamesrowe.com
-        secretName: tls-simonjamesrowe-com-p
+      secretName: tls-simonjamesrowe-com-p
 
 jvmOpts: -Xms256m -Xmx512m
 
