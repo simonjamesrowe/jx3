@@ -4,13 +4,14 @@ ingress:
   hostname: sonarqube.simonjamesrowe.com
   tls: false
   extraTls:
-    hosts:
+    - hosts:
       - sonarqube.simonjamesrowe.com
-    secretName: tls-simonjamesrowe-com-p
-postgres:
+      secretName: tls-simonjamesrowe-com-p
+postgresql:
   enabled: false
 externalDatabase:
   host: postgresql.postgres
+  user: postgres
   existingSecret: sonarqube-credentials
   database: control-plane
   name: postgresql
