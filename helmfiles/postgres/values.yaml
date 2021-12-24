@@ -1,4 +1,4 @@
-postgresqlDatabase: sonar
+postgresqlDatabase: control-plane
 existingSecret: postgres-credentials
 persistence:
   size: 10Gi

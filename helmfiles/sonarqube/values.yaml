@@ -1,0 +1,14 @@
+existingSecret: sonarqube-credentials
+ingress:
+  enabled: true
+  hostname: sonarqube.simonjamesrowe.com
+  tls: true
+  secrets:
+    - tls-simonjamesrowe-com-p
+postgres:
+  enabled: false
+externalDatabase:
+  host: postgresql.postgres
+  existingSecret: sonarqube-credentials
+  database: control-plane
+  name: postgresql
