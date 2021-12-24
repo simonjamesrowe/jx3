@@ -5,8 +5,8 @@ environments:
     - jx-values.yaml
 namespace: sonarqube
 repositories:
-- name: bitnami
-  url: https://charts.bitnami.com/bitnami
+- name: sonarqube
+  url: https://SonarSource.github.io/helm-chart-sonarqube
 releases:
 - chart: ./secrets
   version: 1.0.0
@@ -14,8 +14,8 @@ releases:
   namespace: sonarqube
   values:
   - jx-values.yaml
-- chart: bitnami/sonarqube
-  version: 0.1.6
+- chart: sonarqube/sonarqube
+  version: 1.2.5+179
   name: sonarqube
   values:
   - values.yaml

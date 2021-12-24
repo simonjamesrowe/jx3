@@ -1,26 +1,14 @@
-existingSecret: sonarqube-credentials
 ingress:
   enabled: true
-  hostname: sonarqube.simonjamesrowe.com
-  tls: false
-  extraTls:
+  hosts:
+    - name: sonarqube.simonjamesrowe.com
+  tls:
     - hosts:
-      - sonarqube.simonjamesrowe.com
-      secretName: tls-simonjamesrowe-com-p
-postgresql:
-  enabled: false
-externalDatabase:
-  host: postgresql.postgres
-  user: postgres
-  port: 5432
-  existingSecret: sonarqube-credentials
-  database: control-plane
-extraEnvVars:
-  - name: LOG_LEVEL
-    value: trace
+        - sonarqube.simonjamesrowe.com
+        secretName: tls-simonjamesrowe-com-p
 
-minHeapSize: 256m
-maxHeapSize: 512m
+jvmOpts: -Xms256m -Xmx512m
+
 resources:
   limits:
     cpu: 400m
@@ -28,4 +16,15 @@ resources:
   requests:
     cpu: 200m
     memory: 512Mi
+
+jdbcOverwrite:
+  enable: true
+  jdbcUrl: jdbc:postgresql://postgresql.postgres:5432/control-plane?socketTimeout=1500
+  jdbcUsername: postgresql
+  jdbcSecretName: sonarqube-credentials
+  jdbcSecretPasswordKey: postgresql-password
+
+postgresql:
+  enabled: false
+
 
