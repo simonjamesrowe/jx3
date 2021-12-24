@@ -10,11 +10,14 @@ ingress:
 postgresql:
   enabled: false
 externalDatabase:
-  host: postgresql.postgres.svc.cluster.local
+  host: postgresql.postgres
   user: postgres
+  port: 5432
   existingSecret: sonarqube-credentials
   database: control-plane
-  name: postgresql
+extraEnvVars:
+  - name: LOG_LEVEL
+    value: trace
 
 minHeapSize: 256m
 maxHeapSize: 512m
