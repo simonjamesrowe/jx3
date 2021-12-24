@@ -2,9 +2,11 @@ existingSecret: sonarqube-credentials
 ingress:
   enabled: true
   hostname: sonarqube.simonjamesrowe.com
-  tls: true
-  secrets:
-    - tls-simonjamesrowe-com-p
+  tls: false
+  extraTls:
+    hosts:
+      - sonarqube.simonjamesrowe.com
+    secretName: tls-simonjamesrowe-com-p
 postgres:
   enabled: false
 externalDatabase:

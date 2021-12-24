@@ -16,7 +16,7 @@ releases:
   - jx-values.yaml
 - chart: bitnami/sonarqube
   version: 0.1.6
-  name: mongodb
+  name: sonarqube
   values:
   - values.yaml
   - jx-values.yaml
