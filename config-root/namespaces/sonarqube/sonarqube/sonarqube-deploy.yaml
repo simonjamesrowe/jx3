@@ -99,7 +99,7 @@ spec:
             - name: SONARQUBE_START_TIMEOUT
               value: "150"
             - name: SONARQUBE_DATABASE_HOST
-              value: "\"postgresql.postgres.svc.cluster.local\""
+              value: "\"postgresql.postgres\""
             - name: SONARQUBE_DATABASE_PORT_NUMBER
               value: "5432"
             - name: SONARQUBE_DATABASE_NAME
@@ -115,6 +115,8 @@ spec:
               value: "9000"
             - name: SONARQUBE_ELASTICSEARCH_PORT_NUMBER
               value: "9001"
+            - name: LOG_LEVEL
+              value: trace
           envFrom:
           resources:
             limits:
