@@ -10,8 +10,19 @@ ingress:
 postgresql:
   enabled: false
 externalDatabase:
-  host: postgresql.postgres
+  host: postgresql.postgres.svc.cluster.local
   user: postgres
   existingSecret: sonarqube-credentials
   database: control-plane
   name: postgresql
+
+minHeapSize: 256m
+maxHeapSize: 512m
+resources:
+  limits:
+    cpu: 200m
+    memory: 512Mi
+  requests:
+    cpu: 400m
+    memory: 512Mi
+
