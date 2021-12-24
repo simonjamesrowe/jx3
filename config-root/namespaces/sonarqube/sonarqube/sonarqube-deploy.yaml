@@ -93,13 +93,13 @@ spec:
             - name: SONARQUBE_EMAIL
               value: "user@example.com"
             - name: SONARQUBE_MIN_HEAP_SIZE
-              value: "1024m"
+              value: "256m"
             - name: SONARQUBE_MAX_HEAP_SIZE
-              value: "2048m"
+              value: "512m"
             - name: SONARQUBE_START_TIMEOUT
               value: "150"
             - name: SONARQUBE_DATABASE_HOST
-              value: "\"postgresql.postgres\""
+              value: "\"postgresql.postgres.svc.cluster.local\""
             - name: SONARQUBE_DATABASE_PORT_NUMBER
               value: "5432"
             - name: SONARQUBE_DATABASE_NAME
@@ -117,10 +117,12 @@ spec:
               value: "9001"
           envFrom:
           resources:
-            limits: {}
+            limits:
+              cpu: 400m
+              memory: 756Mi
             requests:
-              cpu: 100m
-              memory: 2048Mi
+              cpu: 200m
+              memory: 512Mi
           ports:
             - name: http
               containerPort: 9000
