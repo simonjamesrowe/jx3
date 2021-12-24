@@ -326,6 +326,49 @@
     - https://github.com/bitnami/bitnami-docker-postgresql
     - https://www.postgresql.org/
     version: 10.13.15
+- namespace: sonarqube
+  path: helmfiles/sonarqube/helmfile.yaml
+  releases:
+  - name: secrets
+    repositoryName: .
+    version: 1.0.0
+  - annotations:
+      category: DeveloperTools
+    apiVersion: v2
+    appVersion: 9.2.4
+    dependencies:
+    - condition: postgresql.enabled
+      name: postgresql
+      repository: https://charts.bitnami.com/bitnami
+      version: 10.x.x
+    - name: common
+      repository: https://charts.bitnami.com/bitnami
+      tags:
+      - bitnami-common
+      version: 1.x.x
+    description: SonarQube is an open source quality management platform that analyzes
+      and measures code's technical quality. It enables developers to detect code
+      issues, vulnerabilities, and bugs in early stages.
+    firstDeployed: "2021-12-24T08:18:20Z"
+    home: https://github.com/bitnami/charts/tree/master/bitnami/sonarqube
+    icon: https://bitnami.com/assets/stacks/sonarqube/img/sonarqube-stack-220x234.png
+    keywords:
+    - sonarqube
+    - code-quality
+    - code-review
+    - static-analysis
+    lastDeployed: "2021-12-24T08:18:20Z"
+    maintainers:
+    - email: containers@bitnami.com
+      name: Bitnami
+    name: sonarqube
+    repositoryName: bitnami
+    repositoryUrl: https://charts.bitnami.com/bitnami
+    resourcePath: config-root/namespaces/sonarqube/sonarqube
+    sources:
+    - https://github.com/bitnami/bitnami-docker-sonarqube
+    - https://github.com/SonarSource/sonarqube
+    version: 0.1.6
 - namespace: jx-production
   path: helmfiles/jx-production/helmfile.yaml
   releases:

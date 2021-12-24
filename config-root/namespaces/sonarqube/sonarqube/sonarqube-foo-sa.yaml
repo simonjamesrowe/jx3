@@ -1,0 +1,15 @@
+# Source: sonarqube/templates/service-account.yaml
+apiVersion: v1
+kind: ServiceAccount
+metadata:
+  name: sonarqube-foo
+  namespace: "sonarqube"
+  labels:
+    app.kubernetes.io/name: sonarqube
+    helm.sh/chart: sonarqube-0.1.6
+    app.kubernetes.io/instance: sonarqube
+    app.kubernetes.io/managed-by: Helm
+    gitops.jenkins-x.io/pipeline: 'namespaces'
+  annotations:
+    meta.helm.sh/release-name: 'sonarqube'
+automountServiceAccountToken: false

@@ -129,6 +129,21 @@
 	      <td><a href='https://github.com/bitnami/charts/tree/master/bitnami/postgresql'>source</a></td>
 	    </tr>
     <tr>
+		      <td colspan='4'><h3>sonarqube</h3></td>
+		    </tr>
+	    <tr>
+	      <td><a href='' title=''> <img src='' width='24px' height='24px'> secrets </a></td>
+	      <td>1.0.0</td>
+	      <td></td>
+	      <td></td>
+	    </tr>
+    <tr>
+	      <td><a href='https://github.com/bitnami/charts/tree/master/bitnami/sonarqube' title='SonarQube is an open source quality management platform that analyzes and measures code&#39;s technical quality. It enables developers to detect code issues, vulnerabilities, and bugs in early stages.'> <img src='https://bitnami.com/assets/stacks/sonarqube/img/sonarqube-stack-220x234.png' width='24px' height='24px'> sonarqube </a></td>
+	      <td>0.1.6</td>
+	      <td></td>
+	      <td><a href='https://github.com/bitnami/charts/tree/master/bitnami/sonarqube'>source</a></td>
+	    </tr>
+    <tr>
 		      <td colspan='4'><h3>jx-production</h3></td>
 		    </tr>
 	    <tr>
