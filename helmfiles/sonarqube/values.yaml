@@ -20,9 +20,9 @@ minHeapSize: 256m
 maxHeapSize: 512m
 resources:
   limits:
-    cpu: 200m
-    memory: 512Mi
-  requests:
     cpu: 400m
+    memory: 756Mi
+  requests:
+    cpu: 200m
     memory: 512Mi
 
