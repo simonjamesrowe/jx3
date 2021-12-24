@@ -1,0 +1,16 @@
+# Source: sonarqube/templates/init-fs.yaml
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: sonarqube-sonarqube-init-fs
+  labels:
+    app: sonarqube
+    chart: sonarqube-1.2.5_179
+    release: sonarqube
+    heritage: Helm
+    gitops.jenkins-x.io/pipeline: 'namespaces'
+  annotations:
+    meta.helm.sh/release-name: 'sonarqube'
+  namespace: sonarqube
+data:
+  init_fs.sh: ""

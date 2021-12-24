@@ -33,9 +33,9 @@ spec:
         component: registry
       annotations:
         checksum/configmap: dbbd548871ae33e48eb16af08dc415671c1a982eea0685ce1a94015b9a0e5dcd
-        checksum/secret: 85182e49449cf7f13e441365c8f984e72eef09f0383e6137e1964d46ad6e9fbe
-        checksum/secret-jobservice: 10af046d99f7ce64ba32819a128aa8946d9fec94b752e647ba46b9ebbd5bfd42
-        checksum/secret-core: f1b30adbe377eed3da502050f93c19f11b5803bc45d9c266eb289876cc6d504a
+        checksum/secret: 3deeaf1c24bfb3774d760a2be0295807b23b4fbd2c408b94bb36a9030c724176
+        checksum/secret-jobservice: efec405554ca371d9032fdd717e0c1b1759c4ca768750dbc43519c083381dcb5
+        checksum/secret-core: 0522426dbf7a59e072bdb957907bdfecd5b2245a31e3a0dce156daf2a120ca5e
     spec:
       securityContext:
         runAsUser: 10000

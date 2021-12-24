@@ -138,10 +138,10 @@
 	      <td></td>
 	    </tr>
     <tr>
-	      <td><a href='https://github.com/bitnami/charts/tree/master/bitnami/sonarqube' title='SonarQube is an open source quality management platform that analyzes and measures code&#39;s technical quality. It enables developers to detect code issues, vulnerabilities, and bugs in early stages.'> <img src='https://bitnami.com/assets/stacks/sonarqube/img/sonarqube-stack-220x234.png' width='24px' height='24px'> sonarqube </a></td>
-	      <td>0.1.6</td>
+	      <td><a href='https://www.sonarqube.org/' title='SonarQube offers Code Quality and Code Security analysis for up to 27 languages. Find Bugs, Vulnerabilities, Security Hotspots and Code Smells throughout your workflow.'> <img src='https://www.sonarqube.org/assets/logo-31ad3115b1b4b120f3d1efd63e6b13ac9f1f89437f0cf6881cc4d8b5603a52b4.svg' width='24px' height='24px'> sonarqube </a></td>
+	      <td>1.2.5+179</td>
 	      <td></td>
-	      <td><a href='https://github.com/bitnami/charts/tree/master/bitnami/sonarqube'>source</a></td>
+	      <td><a href='https://www.sonarqube.org/'>source</a></td>
 	    </tr>
     <tr>
 		      <td colspan='4'><h3>jx-production</h3></td>

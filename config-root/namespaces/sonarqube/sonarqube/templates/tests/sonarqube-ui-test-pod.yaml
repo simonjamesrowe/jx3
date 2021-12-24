@@ -1,0 +1,48 @@
+# Source: sonarqube/templates/tests/sonarqube-test.yaml
+apiVersion: v1
+kind: Pod
+metadata:
+  name: "sonarqube-ui-test"
+  annotations:
+    "helm.sh/hook": test-success
+    meta.helm.sh/release-name: 'sonarqube'
+  labels:
+    app: sonarqube
+    chart: sonarqube-1.2.5_179
+    release: sonarqube
+    heritage: Helm
+    gitops.jenkins-x.io/pipeline: 'namespaces'
+  namespace: sonarqube
+spec:
+  initContainers:
+    - name: "bats"
+      image: "bats/bats:1.2.1"
+      imagePullPolicy: IfNotPresent
+      command: ["bash", "-c"]
+      args:
+        - |-
+          set -ex
+          cp -R /opt/bats /tools/bats/
+      resources: {}
+      volumeMounts:
+        - mountPath: /tools
+          name: tools
+  containers:
+    - name: sonarqube-ui-test
+      image: bitnami/minideb-extras
+      imagePullPolicy: IfNotPresent
+      command: ["/tools/bats/bin/bats", "--tap", "/tests/run.sh"]
+      resources: {}
+      volumeMounts:
+        - mountPath: /tests
+          name: tests
+          readOnly: true
+        - mountPath: /tools
+          name: tools
+  volumes:
+    - name: tests
+      configMap:
+        name: sonarqube-sonarqube-tests
+    - name: tools
+      emptyDir: {}
+  restartPolicy: Never
