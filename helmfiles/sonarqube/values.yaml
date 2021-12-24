@@ -20,7 +20,7 @@ resources:
 jdbcOverwrite:
   enable: true
   jdbcUrl: jdbc:postgresql://postgresql.postgres:5432/control-plane?socketTimeout=1500
-  jdbcUsername: postgresql
+  jdbcUsername: postgres
   jdbcSecretName: sonarqube-credentials
   jdbcSecretPasswordKey: postgresql-password
 
