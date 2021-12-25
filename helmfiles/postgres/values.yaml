@@ -2,3 +2,7 @@ postgresqlDatabase: control-plane
 existingSecret: postgres-credentials
 persistence:
   size: 10Gi
+resources:
+  requests:
+    cpu: 100m
+    memory: 128M

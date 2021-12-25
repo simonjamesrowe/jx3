@@ -8,8 +8,8 @@ volumeClaimTemplate:
       storage: 5Gi
 resources:
   requests:
-    cpu: 500m
+    cpu: 100m
     memory: 512M
   limits:
-    cpu: 500m
+    cpu: 200m
     memory: 512M

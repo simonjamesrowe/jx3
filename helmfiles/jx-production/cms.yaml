@@ -106,10 +106,10 @@ secrets:
 
 containerResources:
   limits:
-    cpu: 400m
+    cpu: 200m
     memory: 256Mi
   requests:
-    cpu: 200m
+    cpu: 100m
     memory: 128Mi
 
 nodeSelector: { }
