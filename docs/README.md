@@ -12,21 +12,6 @@
   </thead>
   <tbody>
     <tr>
-		      <td colspan='4'><h3>kuberhealthy</h3></td>
-		    </tr>
-	    <tr>
-	      <td><a href='https://comcast.github.io/kuberhealthy/' title='An operator for synthetic test and monitoring. Works great with Prometheus.'> <img src='https://raw.githubusercontent.com/Comcast/kuberhealthy/master/images/logo-square.png' width='24px' height='24px'> kuberhealthy </a></td>
-	      <td>64</td>
-	      <td></td>
-	      <td><a href='https://comcast.github.io/kuberhealthy/'>source</a></td>
-	    </tr>
-    <tr>
-	      <td><a href='https://jenkins-x.io/' title='Jenkins X next gen cloud CI / CD platform for Kubernetes'> <img src='https://jenkins-x.github.io/jenkins-x-website/img/profile.png' width='24px' height='24px'> jx-kh-check </a></td>
-	      <td>0.0.78</td>
-	      <td></td>
-	      <td><a href='https://jenkins-x.io/'>source</a></td>
-	    </tr>
-    <tr>
 		      <td colspan='4'><h3>secret-infra</h3></td>
 		    </tr>
 	    <tr>
