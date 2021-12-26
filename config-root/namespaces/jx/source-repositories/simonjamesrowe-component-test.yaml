@@ -1,0 +1,22 @@
+apiVersion: jenkins.io/v1
+kind: SourceRepository
+metadata:
+  creationTimestamp: null
+  labels:
+    owner: simonjamesrowe
+    provider: github
+    repository: component-test
+    gitops.jenkins-x.io/pipeline: 'namespaces'
+  name: simonjamesrowe-component-test
+  namespace: jx
+spec:
+  httpCloneURL: https://github.com/simonjamesrowe/component-test.git
+  org: simonjamesrowe
+  provider: https://github.com
+  providerKind: github
+  providerName: github
+  repo: component-test
+  scheduler:
+    kind: ""
+    name: in-repo
+  url: https://github.com/simonjamesrowe/component-test
