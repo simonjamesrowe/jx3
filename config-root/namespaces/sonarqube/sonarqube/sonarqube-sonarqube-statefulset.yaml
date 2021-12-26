@@ -88,16 +88,16 @@ spec:
               protocol: TCP
           resources:
             limits:
-              cpu: 200m
-              memory: 512Mi
+              cpu: 400m
+              memory: 756Mi
             requests:
-              cpu: 200m
-              memory: 256Mi
+              cpu: 400m
+              memory: 756Mi
           env:
             - name: SONAR_WEB_JAVAOPTS
-              value: "-javaagent:/opt/sonarqube/data/jmx_prometheus_javaagent.jar=8000:/opt/sonarqube/conf/prometheus-config.yaml -Xms128m -Xmx384m"
+              value: "-javaagent:/opt/sonarqube/data/jmx_prometheus_javaagent.jar=8000:/opt/sonarqube/conf/prometheus-config.yaml -Xms256m -Xmx512m"
             - name: SONAR_CE_JAVAOPTS
-              value: "-javaagent:/opt/sonarqube/data/jmx_prometheus_javaagent.jar=8001:/opt/sonarqube/conf/prometheus-ce-config.yaml -Xms128m -Xmx384m"
+              value: "-javaagent:/opt/sonarqube/data/jmx_prometheus_javaagent.jar=8001:/opt/sonarqube/conf/prometheus-ce-config.yaml -Xms256m -Xmx512m"
             - name: SONAR_JDBC_PASSWORD
               valueFrom:
                 secretKeyRef:
