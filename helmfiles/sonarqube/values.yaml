@@ -8,6 +8,7 @@ ingress:
       secretName: tls-simonjamesrowe-com-p
 
 jvmOpts: -Xms128m -Xmx384m
+jvmCeOpts: -Xms128m -Xmx384m
 
 resources:
   limits:
