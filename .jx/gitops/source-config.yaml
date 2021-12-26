@@ -8,6 +8,7 @@ spec:
     provider: https://github.com
     providerKind: github
     repositories:
+    - name: component-test
     - name: demo-react
     - name: jenkinsx-buildpacks
     - name: model
