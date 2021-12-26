@@ -7,16 +7,16 @@ ingress:
         - sonarqube.simonjamesrowe.com
       secretName: tls-simonjamesrowe-com-p
 
-jvmOpts: -Xms128m -Xmx384m
-jvmCeOpts: -Xms128m -Xmx384m
+jvmOpts: -Xms256m -Xmx512m
+jvmCeOpts: -Xms256m -Xmx512m
 
 resources:
   limits:
-    cpu: 200m
-    memory: 512Mi
+    cpu: 400m
+    memory: 756Mi
   requests:
-    cpu: 200m
-    memory: 256Mi
+    cpu: 400m
+    memory: 756Mi
 
 jdbcOverwrite:
   enable: true
