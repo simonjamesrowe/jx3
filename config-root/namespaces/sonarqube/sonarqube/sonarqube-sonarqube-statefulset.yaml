@@ -97,7 +97,7 @@ spec:
             - name: SONAR_WEB_JAVAOPTS
               value: "-javaagent:/opt/sonarqube/data/jmx_prometheus_javaagent.jar=8000:/opt/sonarqube/conf/prometheus-config.yaml -Xms128m -Xmx384m"
             - name: SONAR_CE_JAVAOPTS
-              value: "-javaagent:/opt/sonarqube/data/jmx_prometheus_javaagent.jar=8001:/opt/sonarqube/conf/prometheus-ce-config.yaml"
+              value: "-javaagent:/opt/sonarqube/data/jmx_prometheus_javaagent.jar=8001:/opt/sonarqube/conf/prometheus-ce-config.yaml -Xms128m -Xmx384m"
             - name: SONAR_JDBC_PASSWORD
               valueFrom:
                 secretKeyRef:
