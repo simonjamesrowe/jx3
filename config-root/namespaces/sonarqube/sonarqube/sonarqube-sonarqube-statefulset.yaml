@@ -88,10 +88,10 @@ spec:
               protocol: TCP
           resources:
             limits:
-              cpu: 100m
+              cpu: 200m
               memory: 512Mi
             requests:
-              cpu: 100m
+              cpu: 200m
               memory: 256Mi
           env:
             - name: SONAR_WEB_JAVAOPTS
