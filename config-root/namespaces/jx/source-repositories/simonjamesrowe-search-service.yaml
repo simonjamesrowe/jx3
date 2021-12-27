@@ -1,0 +1,22 @@
+apiVersion: jenkins.io/v1
+kind: SourceRepository
+metadata:
+  creationTimestamp: null
+  labels:
+    owner: simonjamesrowe
+    provider: github
+    repository: search-service
+    gitops.jenkins-x.io/pipeline: 'namespaces'
+  name: simonjamesrowe-search-service
+  namespace: jx
+spec:
+  httpCloneURL: https://github.com/simonjamesrowe/search-service.git
+  org: simonjamesrowe
+  provider: https://github.com
+  providerKind: github
+  providerName: github
+  repo: search-service
+  scheduler:
+    kind: ""
+    name: in-repo
+  url: https://github.com/simonjamesrowe/search-service
