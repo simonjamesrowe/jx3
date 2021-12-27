@@ -1,0 +1,22 @@
+apiVersion: jenkins.io/v1
+kind: SourceRepository
+metadata:
+  creationTimestamp: null
+  labels:
+    owner: simonjamesrowe
+    provider: github
+    repository: react-ui
+    gitops.jenkins-x.io/pipeline: 'namespaces'
+  name: simonjamesrowe-react-ui
+  namespace: jx
+spec:
+  httpCloneURL: https://github.com/simonjamesrowe/react-ui.git
+  org: simonjamesrowe
+  provider: https://github.com
+  providerKind: github
+  providerName: github
+  repo: react-ui
+  scheduler:
+    kind: ""
+    name: in-repo
+  url: https://github.com/simonjamesrowe/react-ui
