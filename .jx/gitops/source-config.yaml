@@ -12,6 +12,7 @@ spec:
     - name: demo-react
     - name: jenkinsx-buildpacks
     - name: model
+    - name: search-service
     - name: strapi-cms
     scheduler: in-repo
   slack:

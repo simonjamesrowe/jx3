@@ -24,6 +24,10 @@ data:
       require_self_approval: true
     - lgtm_acts_as_approve: true
       repos:
+      - simonjamesrowe/search-service
+      require_self_approval: true
+    - lgtm_acts_as_approve: true
+      repos:
       - simonjamesrowe/strapi-cms
       require_self_approval: true
     cat: {}
@@ -52,6 +56,11 @@ data:
       - endpoint: http://lighthouse-webui-plugin.jx.svc.cluster.local/lighthouse/events
         name: lighthouse-webui-plugin
       simonjamesrowe/model:
+      - endpoint: http://cd-indicators.jx.svc.cluster.local/lighthouse/events
+        name: cd-indicators
+      - endpoint: http://lighthouse-webui-plugin.jx.svc.cluster.local/lighthouse/events
+        name: lighthouse-webui-plugin
+      simonjamesrowe/search-service:
       - endpoint: http://cd-indicators.jx.svc.cluster.local/lighthouse/events
         name: cd-indicators
       - endpoint: http://lighthouse-webui-plugin.jx.svc.cluster.local/lighthouse/events
@@ -135,6 +144,22 @@ data:
       - cat
       - dog
       - pony
+      simonjamesrowe/search-service:
+      - approve
+      - assign
+      - blunderbuss
+      - help
+      - hold
+      - lgtm
+      - lifecycle
+      - override
+      - size
+      - trigger
+      - wip
+      - heart
+      - cat
+      - dog
+      - pony
       simonjamesrowe/strapi-cms:
       - approve
       - assign
@@ -191,6 +216,9 @@ data:
       trusted_org: todo
     - repos:
       - simonjamesrowe/model
+      trusted_org: todo
+    - repos:
+      - simonjamesrowe/search-service
       trusted_org: todo
     - repos:
       - simonjamesrowe/strapi-cms

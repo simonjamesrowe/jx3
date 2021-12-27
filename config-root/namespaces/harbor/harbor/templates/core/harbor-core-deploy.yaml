@@ -29,8 +29,8 @@ spec:
         component: core
       annotations:
         checksum/configmap: 60694b291eee0b9d4cbfa0cdf5110dae964fa68f04cf3296d787c78f83fba6e2
-        checksum/secret: 6a220ef9b4cf4c927be41b3d360903c9dc6971b890c9c5b9394e4a23620561d7
-        checksum/secret-jobservice: 0e77fae0ec6b4f569beab4be6bdb52e5d5b96c0108b3d611cef0d4e0e151059c
+        checksum/secret: 639cf87af66a9a0e19b1da7609c809c2bd0fe71b41d0ad8d38c693b605ae9ad0
+        checksum/secret-jobservice: 79cb2d140da387801802cc809a7c0f9ffa38ffbda5d17cfe912b3fd7557524e2
     spec:
       securityContext:
         runAsUser: 10000
