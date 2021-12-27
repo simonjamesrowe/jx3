@@ -8,6 +8,10 @@ data:
       require_self_approval: true
     - lgtm_acts_as_approve: true
       repos:
+      - simonjamesrowe/api-gateway
+      require_self_approval: true
+    - lgtm_acts_as_approve: true
+      repos:
       - simonjamesrowe/component-test
       require_self_approval: true
     - lgtm_acts_as_approve: true
@@ -36,6 +40,11 @@ data:
         env/prow/plugins.yaml:
           name: plugins
     external_plugins:
+      simonjamesrowe/api-gateway:
+      - endpoint: http://cd-indicators.jx.svc.cluster.local/lighthouse/events
+        name: cd-indicators
+      - endpoint: http://lighthouse-webui-plugin.jx.svc.cluster.local/lighthouse/events
+        name: lighthouse-webui-plugin
       simonjamesrowe/component-test:
       - endpoint: http://cd-indicators.jx.svc.cluster.local/lighthouse/events
         name: cd-indicators
@@ -71,6 +80,22 @@ data:
       additional_labels: null
     owners: {}
     plugins:
+      simonjamesrowe/api-gateway:
+      - approve
+      - assign
+      - blunderbuss
+      - help
+      - hold
+      - lgtm
+      - lifecycle
+      - override
+      - size
+      - trigger
+      - wip
+      - heart
+      - cat
+      - dog
+      - pony
       simonjamesrowe/component-test:
       - approve
       - assign
@@ -179,6 +204,9 @@ data:
     triggers:
     - repos:
       - simonrowe/jx3
+      trusted_org: todo
+    - repos:
+      - simonjamesrowe/api-gateway
       trusted_org: todo
     - repos:
       - simonjamesrowe/component-test

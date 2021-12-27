@@ -7,6 +7,7 @@ data:
       LinkURL: null
     in_repo_config:
       enabled:
+        simonjamesrowe/api-gateway: true
         simonjamesrowe/component-test: true
         simonjamesrowe/demo-react: true
         simonjamesrowe/jenkinsx-buildpacks: true
@@ -24,6 +25,7 @@ data:
         required-if-present-contexts: null
         skip-unknown-contexts: false
       merge_method:
+        simonjamesrowe/api-gateway: merge
         simonjamesrowe/component-test: merge
         simonjamesrowe/demo-react: merge
         simonjamesrowe/jenkinsx-buildpacks: merge
@@ -41,6 +43,7 @@ data:
         - needs-rebase
         repos:
         - simonrowe/jx3
+        - simonjamesrowe/api-gateway
         - simonjamesrowe/component-test
         - simonjamesrowe/demo-react
         - simonjamesrowe/jenkinsx-buildpacks
@@ -56,6 +59,7 @@ data:
         - needs-rebase
         repos:
         - simonrowe/jx3
+        - simonjamesrowe/api-gateway
         - simonjamesrowe/component-test
         - simonjamesrowe/demo-react
         - simonjamesrowe/jenkinsx-buildpacks

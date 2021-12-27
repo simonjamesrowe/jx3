@@ -1,0 +1,22 @@
+apiVersion: jenkins.io/v1
+kind: SourceRepository
+metadata:
+  creationTimestamp: null
+  labels:
+    owner: simonjamesrowe
+    provider: github
+    repository: api-gateway
+    gitops.jenkins-x.io/pipeline: 'namespaces'
+  name: simonjamesrowe-api-gateway
+  namespace: jx
+spec:
+  httpCloneURL: https://github.com/simonjamesrowe/api-gateway.git
+  org: simonjamesrowe
+  provider: https://github.com
+  providerKind: github
+  providerName: github
+  repo: api-gateway
+  scheduler:
+    kind: ""
+    name: in-repo
+  url: https://github.com/simonjamesrowe/api-gateway
