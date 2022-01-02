@@ -340,3 +340,17 @@
     repositoryUrl: https://helmcharts.gruntwork.io
     resourcePath: config-root/namespaces/jx-production/k8s-service-cms
     version: 0.2.9
+  - apiVersion: v1
+    description: A Helm chart to package your application container for Kubernetes
+    firstDeployed: "2021-12-23T08:04:51Z"
+    home: https://github.com/gruntwork-io/helm-kubernetes-services
+    lastDeployed: "2021-12-23T08:04:51Z"
+    maintainers:
+    - email: info@gruntwork.io
+      name: Gruntwork
+      url: https://gruntwork.io
+    name: k8s-service
+    repositoryName: gruntwork
+    repositoryUrl: https://helmcharts.gruntwork.io
+    resourcePath: config-root/namespaces/jx-production/k8s-service-search-service
+    version: 0.2.9

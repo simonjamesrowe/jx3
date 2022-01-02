@@ -143,6 +143,12 @@
 	      <td></td>
 	      <td><a href='https://github.com/gruntwork-io/helm-kubernetes-services'>source</a></td>
 	    </tr>
+    <tr>
+	      <td><a href='https://github.com/gruntwork-io/helm-kubernetes-services' title='A Helm chart to package your application container for Kubernetes'> <img src='' width='24px' height='24px'> k8s-service </a></td>
+	      <td>0.2.9</td>
+	      <td></td>
+	      <td><a href='https://github.com/gruntwork-io/helm-kubernetes-services'>source</a></td>
+	    </tr>
 
   </tbody>
 </table>

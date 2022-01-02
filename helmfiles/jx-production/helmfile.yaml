@@ -28,7 +28,7 @@ releases:
   name: search-service
   namespace: jx-production
   values:
-    - search-service.yaml
-    - jx-values.yaml
+  - search-service.yaml
+  - jx-values.yaml
 templates: {}
 renderedvalues: {}

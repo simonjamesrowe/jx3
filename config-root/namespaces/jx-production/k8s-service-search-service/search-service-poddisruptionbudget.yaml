@@ -1,0 +1,23 @@
+# Source: k8s-service/templates/pdb.yaml
+apiVersion: policy/v1beta1
+kind: PodDisruptionBudget
+metadata:
+  name: search-service
+  labels:
+    gruntwork.io/app-name: search-service
+    # These labels are required by helm. You can read more about required labels in the chart best practices guide:
+    # https://docs.helm.sh/chart_best_practices/#standard-labels
+    app.kubernetes.io/name: search-service
+    helm.sh/chart: k8s-service-v0.2.9
+    app.kubernetes.io/instance: search-service
+    app.kubernetes.io/managed-by: Helm
+    gitops.jenkins-x.io/pipeline: 'namespaces'
+  annotations:
+    meta.helm.sh/release-name: 'search-service'
+  namespace: jx-production
+spec:
+  minAvailable: 1
+  selector:
+    matchLabels:
+      app.kubernetes.io/name: search-service
+      app.kubernetes.io/instance: search-service
