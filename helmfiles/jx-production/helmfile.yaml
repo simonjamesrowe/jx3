@@ -23,5 +23,12 @@ releases:
   values:
   - cms.yaml
   - jx-values.yaml
+- chart: gruntwork/k8s-service
+  version: 0.2.9
+  name: search-service
+  namespace: jx-production
+  values:
+    - search-service.yaml
+    - jx-values.yaml
 templates: {}
 renderedvalues: {}
