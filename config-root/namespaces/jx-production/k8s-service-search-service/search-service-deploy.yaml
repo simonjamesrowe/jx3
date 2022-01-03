@@ -33,7 +33,7 @@ spec:
     spec:
       containers:
         - name: search-service
-          image: "harbor.simonjamesrowe.com/simonjamesrowe/search-service:0.0.148"
+          image: "harbor.simonjamesrowe.com/simonjamesrowe/search-service:0.0.165"
           imagePullPolicy: IfNotPresent
           ports:
             - name: http
