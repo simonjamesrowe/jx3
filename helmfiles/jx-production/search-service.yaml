@@ -2,7 +2,7 @@ applicationName: search-service
 
 containerImage:
   repository: harbor.simonjamesrowe.com/simonjamesrowe/search-service
-  tag: 0.0.148
+  tag: 0.0.165
   pullPolicy: IfNotPresent
 
 containerPorts:
