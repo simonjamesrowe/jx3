@@ -33,7 +33,7 @@ spec:
     spec:
       containers:
         - name: search-service
-          image: "harbor.simonjamesrowe.com/simonjamesrowe/search-service:0.0.165"
+          image: "harbor.simonjamesrowe.com/simonjamesrowe/search-service:0.0.174"
           imagePullPolicy: IfNotPresent
           ports:
             - name: http
@@ -58,10 +58,10 @@ spec:
           resources:
             limits:
               cpu: 200m
-              memory: 256Mi
+              memory: 128Mi
             requests:
               cpu: 100m
-              memory: 128Mi
+              memory: 64Mi
           # Include a preStop hook with a shutdown delay for eventual consistency reasons.
           # See https://blog.gruntwork.io/delaying-shutdown-to-wait-for-pod-deletion-propagation-445f779a8304
           lifecycle:
