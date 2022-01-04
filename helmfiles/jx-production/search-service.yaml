@@ -2,7 +2,7 @@ applicationName: search-service
 
 containerImage:
   repository: harbor.simonjamesrowe.com/simonjamesrowe/search-service
-  tag: 0.0.165
+  tag: 0.0.174
   pullPolicy: IfNotPresent
 
 containerPorts:
@@ -81,10 +81,10 @@ emptyDirs: { }
 containerResources:
   limits:
     cpu: 200m
-    memory: 256Mi
+    memory: 128Mi
   requests:
     cpu: 100m
-    memory: 128Mi
+    memory: 64Mi
 
 nodeSelector: { }
 affinity: { }
